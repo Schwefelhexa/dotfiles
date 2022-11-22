@@ -1,0 +1,20 @@
+import:
+  - ~/.config/alacritty/fonts.yml
+
+env:
+  TERM: alacritty
+
+cursor:
+  style:
+    shape: Block
+    blinking: On
+
+visual_bell:
+  animation: EaseOutExpo
+  duration: 1
+  color: '#ffffff'
+
+shell:
+  program: /opt/homebrew/bin/tmux
+
+live_config_reload: true
