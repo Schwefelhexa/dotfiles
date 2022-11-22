@@ -1,0 +1,1 @@
+/Users/albarn/Library/Application Support/nushell/env.nu
