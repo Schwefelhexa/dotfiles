@@ -73,8 +73,8 @@
       "alignment": "right",
       "segments": [
         {
-          "background": "#83769c",
-          "foreground": "#ffffff",
+          "background": "#2dd4bf",
+          "foreground": "#134e4a",
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "properties": {
@@ -120,14 +120,14 @@
           "style": "powerline",
           "powerline_symbol": "\uE0B2",
           "invert_powerline": true,
-          "foreground": "#193549",
-          "background": "#99908a",
+          "foreground": "#ffffff",
+          "background": "#78716c",
           "template": " \uE7a8 {{ .Full }} "
         },
         {
           "type": "time",
           "foreground": "#ffffff",
-          "background": "#61AFEF",
+          "background": "#0ea5e9",
           "style": "diamond",
           "invert_powerline": true,
           "trailing_diamond": "\ue0b4",
