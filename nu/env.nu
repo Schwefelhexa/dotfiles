@@ -1,7 +1,7 @@
 # Nushell Environment Config File
 
 # Make brew usable
-let-env PATH = ($env.PATH | append /opt/homebrew/bin)
+let-env PATH = ($env.PATH | append /opt/homebrew/bin | append ~/.cargo/bin)
 
 # Use oh-my-posh
 let posh_theme = 'albarn'
