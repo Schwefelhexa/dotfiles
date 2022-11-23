@@ -84,6 +84,19 @@
           "template": " {{ .FormattedMs }} ",
           "type": "executiontime"
         },
+         {
+          "type": "shell",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B2",
+          "invert_powerline": true,
+          "foreground": "#ffffff",
+          "background": "#0d9488",
+          "properties": {
+            "mapped_shell_names": {
+              "pwsh": "PS"
+            }
+          }
+        },
         {
           "type": "python",
           "style": "powerline",
