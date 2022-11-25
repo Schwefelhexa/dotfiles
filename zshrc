@@ -105,3 +105,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nv="XDG_CONFIG_HOME=~/.config/my nvim"
+alias vim="nvim"
+alias v="vim"
