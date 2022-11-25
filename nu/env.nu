@@ -5,7 +5,7 @@ let-env PATH = ($env.PATH | append /opt/homebrew/bin | append ~/.cargo/bin)
 
 # Use oh-my-posh
 let posh_theme = 'albarn'
-let posh_theme_dir = $'~/.nu/themes/($posh_theme)'
+let posh_theme_dir = $'~/.files/nu/themes/($posh_theme)'
 let-env PROMPT_COMMAND = { oh-my-posh prompt print primary --config $'($posh_theme_dir).omp.json' }
 let-env PROMPT_COMMAND_RIGHT = { oh-my-posh prompt print right --config $'($posh_theme_dir).omp.json' }
 # Optional
