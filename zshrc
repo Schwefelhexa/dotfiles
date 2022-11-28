@@ -5,6 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export DOCKER_BUILDKIT=0
 export COMPOSE_DOCKER_CLI_BUILD=0
+export PATH="$PATH:/opt/homebrew/bin"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -13,7 +14,7 @@ export COMPOSE_DOCKER_CLI_BUILD=0
 # ZSH_THEME="agnoster"
 
 # Use oh-my-posh
-eval "$(oh-my-posh init zsh --config ~/.files/nu/themes/albarn.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.files/theme/prompt.omp.json)"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
