@@ -5,7 +5,11 @@
 export ZSH="$HOME/.oh-my-zsh"
 export DOCKER_BUILDKIT=0
 export COMPOSE_DOCKER_CLI_BUILD=0
-export PATH="$PATH:/opt/homebrew/bin"
+
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    export PATH="$PATH:/opt/homebrew/bin"
+fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,6 +109,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias nv="XDG_CONFIG_HOME=~/.config/my nvim"
 alias vim="nvim"
 alias v="vim"
