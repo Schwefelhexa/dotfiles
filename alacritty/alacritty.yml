@@ -1,5 +1,6 @@
 import:
   - ~/.config/alacritty/fonts.yml
+  - ~/.config/alacritty/nord.yml
 
 env:
   TERM: alacritty
