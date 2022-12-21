@@ -14,7 +14,7 @@ visual_bell:
   duration: 1
   color: '#ffffff'
 
-shell:
-  program: /opt/homebrew/bin/tmux
-
 live_config_reload: true
+
+shell:
+  program: tmux
