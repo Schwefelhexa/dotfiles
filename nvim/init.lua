@@ -37,6 +37,8 @@ require('packer').startup(function(use)
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   }
+  -- sxhkd highlighting
+  use 'kovetskiy/sxhkd-vim'
 
   use { -- Additional text objects via treesitter
     'nvim-treesitter/nvim-treesitter-textobjects',
@@ -59,6 +61,12 @@ require('packer').startup(function(use)
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
+
+  -- Save with sudo
+  use 'lambdalisue/suda.vim'
+
+  -- Popup stuff
+  use 'voldikss/vim-floaterm'
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -92,6 +100,13 @@ vim.api.nvim_create_autocmd('BufWritePost', {
   pattern = vim.fn.expand '$MYVIMRC',
 })
 
+vim.api.nvim_create_autocmd('BufWritePre', {
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+  pattern = "*",
+})
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
@@ -107,6 +122,8 @@ vim.o.mouse = 'a'
 
 -- Enable break indent
 vim.o.breakindent = true
+
+vim.o.tabstop = 2
 
 -- Save undo history
 vim.o.undofile = true
@@ -145,7 +162,10 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 -- Save as sudo when file is not opened w/ sudo
-vim.api.nvim_create_user_command('W', 'w !sudo tee %', {})
+vim.api.nvim_create_user_command('W', 'SudaWrite', {})
+
+vim.keymap.set('n', '<leader>wg', ':FloatermNew lazygit<CR>', { desc = "[W]indow [G]it" })
+vim.keymap.set('n', '<leader>wt', ':FloatermToggle<CR>', { desc = "[W]indow [T]erminal" })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -228,7 +248,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help', 'astro', 'css', 'tsx' },
 
   highlight = { enable = true },
   indent = { enable = true, disable = { 'python' } },
@@ -433,4 +453,3 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
