@@ -71,7 +71,12 @@ require('packer').startup(function(use)
   -- Nicer navigation
   use 'ggandor/leap.nvim'
   use 'ThePrimeagen/harpoon'
+
   use 'preservim/nerdtree'
+  use 'ryanoasis/vim-devicons'
+  use 'scrooloose/nerdtree-project-plugin'
+  use 'Xuyuanp/nerdtree-git-plugin'
+  use 'PhilRunninger/nerdtree-buffer-ops'
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
