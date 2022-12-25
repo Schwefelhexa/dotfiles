@@ -233,7 +233,7 @@ pcall(require('telescope').load_extension, 'fzf')
 
 require('leap').add_default_mappings()
 
-vim.keymap.set('n', '<leader>hm', require("harpoon.mark").add_file, { desc = "[H]arpoon [M]ark" })
+vim.keymap.set('n', '<leader>ha', require("harpoon.mark").add_file, { desc = "[H]arpoon [A]dd" })
 vim.keymap.set('n', '<leader>hf', require("harpoon.ui").toggle_quick_menu, { desc = "[H]arpoon [F]ind" })
 
 -- See `:help telescope.builtin`
