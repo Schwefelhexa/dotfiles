@@ -68,6 +68,10 @@ require('packer').startup(function(use)
   -- Popup stuff
   use 'voldikss/vim-floaterm'
 
+  -- Nicer navigation
+  use 'ggandor/leap.nvim'
+  use 'ThePrimeagen/harpoon'
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
@@ -226,6 +230,11 @@ require('telescope').setup {
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
+
+require('leap').add_default_mappings()
+
+vim.keymap.set('n', '<leader>hm', require("harpoon.mark").add_file, { desc = "[H]arpoon [M]ark" })
+vim.keymap.set('n', '<leader>hf', require("harpoon.ui").toggle_quick_menu, { desc = "[H]arpoon [F]ind" })
 
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
