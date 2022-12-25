@@ -174,6 +174,11 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 -- Save as sudo when file is not opened w/ sudo
 vim.api.nvim_create_user_command('W', 'SudaWrite', {})
 
+vim.keymap.set('n', '<leader>wh', '<C-w>h', { desc = "[W]indow: h" })
+vim.keymap.set('n', '<leader>wj', '<C-w>j', { desc = "[W]indow: j" })
+vim.keymap.set('n', '<leader>wk', '<C-w>k', { desc = "[W]indow: k" })
+vim.keymap.set('n', '<leader>wl', '<C-w>l', { desc = "[W]indow: l" })
+
 vim.keymap.set('n', '<leader>wg', ':FloatermNew lazygit<CR>', { desc = "[W]indow [G]it" })
 vim.keymap.set('n', '<leader>wt', ':FloatermToggle<CR>', { desc = "[W]indow [T]erminal" })
 
