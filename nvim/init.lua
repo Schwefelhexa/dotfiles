@@ -71,6 +71,7 @@ require('packer').startup(function(use)
   -- Nicer navigation
   use 'ggandor/leap.nvim'
   use 'ThePrimeagen/harpoon'
+  use 'preservim/nerdtree'
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -236,6 +237,12 @@ require('leap').add_default_mappings()
 vim.keymap.set('n', '<leader>ha', require("harpoon.mark").add_file, { desc = "[H]arpoon [A]dd" })
 vim.keymap.set('n', '<leader>hf', require("harpoon.ui").toggle_quick_menu, { desc = "[H]arpoon [F]ind" })
 
+vim.keymap.set('n', '<leader>e', ":NERDTreeToggle<CR>", { desc = "[E]xplorer" })
+vim.api.nvim_create_autocmd('VimEnter', {
+  command = "NERDTree | wincmd p",
+  pattern = "*",
+})
+
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
@@ -319,7 +326,6 @@ require('nvim-treesitter.configs').setup {
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- LSP settings.
@@ -351,7 +357,6 @@ local on_attach = function(_, bufnr)
 
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-  nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
