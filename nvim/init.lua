@@ -37,6 +37,8 @@ require('packer').startup(function(use)
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   }
+  use 'm4xshen/autoclose.nvim'
+
   -- sxhkd highlighting
   use 'kovetskiy/sxhkd-vim'
 
@@ -332,6 +334,8 @@ require('nvim-treesitter.configs').setup {
     },
   },
 }
+
+require("autoclose").setup({})
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
