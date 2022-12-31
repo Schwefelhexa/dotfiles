@@ -72,11 +72,10 @@ require('packer').startup(function(use)
   use 'ggandor/leap.nvim'
   use 'ThePrimeagen/harpoon'
 
-  use 'preservim/nerdtree'
-  use 'ryanoasis/vim-devicons'
-  use 'scrooloose/nerdtree-project-plugin'
-  use 'Xuyuanp/nerdtree-git-plugin'
-  use 'PhilRunninger/nerdtree-buffer-ops'
+  use {
+    'nvim-neo-tree/neo-tree.nvim',
+    requires = { { "MunifTanjim/nui.nvim", module = "nui" }, "nvim-tree/nvim-web-devicons" },
+  }
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -247,11 +246,12 @@ require('leap').add_default_mappings()
 vim.keymap.set('n', '<leader>ha', require("harpoon.mark").add_file, { desc = "[H]arpoon [A]dd" })
 vim.keymap.set('n', '<leader>hf', require("harpoon.ui").toggle_quick_menu, { desc = "[H]arpoon [F]ind" })
 
-vim.keymap.set('n', '<leader>e', ":NERDTreeToggle<CR>", { desc = "[E]xplorer" })
-vim.api.nvim_create_autocmd('VimEnter', {
-  command = "NERDTree | wincmd p",
-  pattern = "*",
-})
+vim.keymap.set('n', '<leader>e', ":Neotree toggle<CR>", { desc = "[E]xplorer" })
+vim.api.nvim_create_autocmd('StdinReadPre', { command = "let s:std_in=1", pattern = "*" })
+-- Open NeoTree when opening nvim in folder
+vim.api.nvim_create_autocmd('VimEnter',
+  { command = "if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') | execute 'Neotree toggle' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif",
+    pattern = "*" })
 
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
@@ -372,9 +372,6 @@ local on_attach = function(_, bufnr)
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
   nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
   nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
-  nmap('<leader>wl', function()
-    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  end, '[W]orkspace [L]ist Folders')
 
   -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
