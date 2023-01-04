@@ -1,0 +1,13 @@
+Host rh
+	HostName royalhost
+
+Host h halo
+	HostName halo
+	User root
+
+Host s spp
+	HostName 10.34.10.31
+	User operation
+
+Host *
+	ForwardAgent yes
