@@ -28,5 +28,5 @@ if [ -d ~/.files/xinitrc.d ] ; then
 fi
 
 # start bspwm
-exec $1
+exec ${1-/usr/bin/bspwm}
 
