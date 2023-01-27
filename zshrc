@@ -20,7 +20,8 @@ fi
 # ZSH_THEME="agnoster"
 
 # Use oh-my-posh
-eval "$(oh-my-posh init zsh --config ~/.files/theme/prompt.omp.json)"
+theme="$(brew --prefix oh-my-posh)/themes/atomic.omp.json"
+eval "$(oh-my-posh init zsh --config $theme)"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
