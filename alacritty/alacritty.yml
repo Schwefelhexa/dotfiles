@@ -17,5 +17,14 @@ visual_bell:
 
 live_config_reload: true
 
+colors:
+  transparent_background_colors: false
+
+window:
+  opacity: 0.8
+  dimensions:
+    columns: 133
+    lines: 40
+
 shell:
   program: tmux
