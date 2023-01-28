@@ -1,24 +1,29 @@
 super + space
 	rofi -show combi -modes "window,drun,run,combi"
 
-control + space
+alt + space
 	rofi -show ssh
 
-super + Return
-	alacritty
+super + {_,shift +} Return
+	/home/albarn/.local/bin/term {_,--float}
 
 super + f
 	firefox-developer-edition
 
+super + ctrl + alt + r
+	sudo reboot now
+
 # Reload sxhkdrc
 super + shift + r
-    pkill -usr1 -x sxhkd
+    pkill -usr1 -x sxhkd; notify-send 'SXHKD config reloaded' -t 1500
 
 # Media Keys
 XF86Audio{Lower,Raise}Volume
 	pactl set-sink-volume @DEFAULT_SINK@ {-,+}5%
 {_,shift + }XF86AudioNext
 	playerctl {next,previous}
+XF86AudioPlay
+	playerctl play-pause
 
 # ======== BSPWM ========
 # quit/restart bspwm

@@ -6,8 +6,9 @@ export ZSH="$HOME/.oh-my-zsh"
 export DOCKER_BUILDKIT=0
 export COMPOSE_DOCKER_CLI_BUILD=0
 
-export EDITOR="nvim"
+export PATH="$PATH:$HOME/.local/bin"
 
+export EDITOR="nvim"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$PATH:/opt/homebrew/bin"
