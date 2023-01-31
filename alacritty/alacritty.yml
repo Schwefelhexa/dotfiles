@@ -25,6 +25,3 @@ window:
   dimensions:
     columns: 133
     lines: 40
-
-shell:
-  program: tmux
