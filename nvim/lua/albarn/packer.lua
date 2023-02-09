@@ -38,6 +38,13 @@ return require('packer').startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
 
+  use {
+    "sudormrfbin/cheatsheet.nvim",
+    requires = {
+      { 'nvim-lua/popup.nvim' }
+    }
+  }
+
   use "tversteeg/registers.nvim"
   use "zbirenbaum/neodim"
 
