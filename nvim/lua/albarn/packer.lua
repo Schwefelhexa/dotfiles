@@ -66,6 +66,8 @@ return require('packer').startup(function(use)
     requires = { { "MunifTanjim/nui.nvim", module = "nui" }, "nvim-tree/nvim-web-devicons" },
   }
 
+  use "folke/which-key.nvim"
+
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v1.x',
