@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
 
   use "tversteeg/registers.nvim"
   use "zbirenbaum/neodim"
+  use "rcarriga/nvim-notify"
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
