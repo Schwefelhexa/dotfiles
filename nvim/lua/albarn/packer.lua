@@ -31,8 +31,6 @@ return require('packer').startup(function(use)
   use("mbbill/undotree")
   use("nvim-treesitter/nvim-treesitter-context")
 
-  use "BurntSushi/ripgrep"
-
   use("shaunsingh/nord.nvim") -- Theme inspired by Atom
   use("folke/tokyonight.nvim")
 
