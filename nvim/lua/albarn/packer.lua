@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
   use 'ggandor/leap.nvim'
 
+  use "folke/trouble.nvim"
   use "folke/todo-comments.nvim"
 
   use 'm4xshen/autoclose.nvim'
