@@ -31,9 +31,6 @@ return require('packer').startup(function(use)
   use("mbbill/undotree")
   use("nvim-treesitter/nvim-treesitter-context")
 
-  use("shaunsingh/nord.nvim") -- Theme inspired by Atom
-  use("folke/tokyonight.nvim")
-
   use("lewis6991/gitsigns.nvim")
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
@@ -61,6 +58,9 @@ return require('packer').startup(function(use)
   use 'm4xshen/autoclose.nvim'
   use 'voldikss/vim-floaterm'
 
+  use { 'catppuccin/nvim', as = 'catppuccin' }
+
+  use  'kyazdani42/nvim-web-devicons'
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
