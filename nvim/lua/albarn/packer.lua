@@ -48,6 +48,15 @@ return require('packer').startup(function(use)
   use "zbirenbaum/neodim"
   use "rcarriga/nvim-notify"
 
+  use {
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+    config = function ()
+      require("albarn.dashboard")
+    end,
+    requires = { 'nvim-tree/nvim-web-devicons' }
+  }
+
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
   use 'ggandor/leap.nvim'
@@ -60,7 +69,7 @@ return require('packer').startup(function(use)
 
   use { 'catppuccin/nvim', as = 'catppuccin' }
 
-  use  'kyazdani42/nvim-web-devicons'
+  use 'kyazdani42/nvim-web-devicons'
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
