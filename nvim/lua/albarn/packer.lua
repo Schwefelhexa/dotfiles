@@ -31,6 +31,8 @@ return require('packer').startup(function(use)
   use("mbbill/undotree")
   use("nvim-treesitter/nvim-treesitter-context")
 
+  use "BurntSushi/ripgrep"
+
   use("shaunsingh/nord.nvim") -- Theme inspired by Atom
   use("folke/tokyonight.nvim")
 
@@ -52,6 +54,8 @@ return require('packer').startup(function(use)
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
   use 'ggandor/leap.nvim'
+
+  use "folke/todo-comments.nvim"
 
   use 'm4xshen/autoclose.nvim'
   use 'voldikss/vim-floaterm'
