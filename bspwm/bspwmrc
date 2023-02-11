@@ -44,6 +44,9 @@ for i in "${floating[@]}"; do
 
 sxhkd &
 
+polybar -c ~/.config/polybar/config.ini top &
+polybar -c ~/.config/polybar/config.ini bottom &
+
 # Autostart windows
 autostart=(whatsapp-nativefier signal-desktop telegram-desktop thunderbird)
 for prog in "${autostart[@]}"

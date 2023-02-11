@@ -19,14 +19,6 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-# start some nice programs
-if [ -d ~/.files/xinitrc.d ] ; then
- for f in ~/.files/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
-fi
-
-# start bspwm
-exec ${1-/usr/bin/bspwm}
+# start window manager
+exec $1
 
