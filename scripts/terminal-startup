@@ -1,6 +1,8 @@
-#!/bin/bash
+#!/bin/zsh
 
 # This creates/attaches to a tmux session named "base"
+
+source ~/.zshrc
 
 tmux has-session -t base
 if [ $? -ne 0 ]; then
@@ -12,5 +14,4 @@ if [ -n "$TMUX" ]; then
 else
   tmux attach-session -t base
 fi
-
 

@@ -21,7 +21,10 @@ colors:
   transparent_background_colors: false
 
 shell:
-  program: /home/albarn/.files/scripts/terminal-startup
+  program: /bin/zsh
+  args:
+  - -c
+  - $HOME/.files/scripts/terminal-startup
 
 window:
   opacity: 0.8

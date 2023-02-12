@@ -4,7 +4,10 @@
 
 # Select a project
 projects=$(ls -d ~/Projects/*)
-selected="$(echo "$projects" | fzf)"
+selected="$(echo "$projects" | fzf-tmux)"
+if [ -z "$selected" ]; then
+  exit 0
+fi
 name=$(basename $selected | sed 's/[ .-]/_/g' | tr '[:upper:]' '[:lower:]')
 
 # If necessary, create a new tmux session and windows
