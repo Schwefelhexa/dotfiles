@@ -72,6 +72,7 @@ return require('packer').startup(function(use)
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use("nvim-treesitter/nvim-treesitter-context")
   use "folke/todo-comments.nvim"
+  use 'lukoshkin/trailing-whitespace' -- Highlight trailing whitespace
   use "folke/trouble.nvim"
   use("lewis6991/gitsigns.nvim")
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
