@@ -20,6 +20,9 @@ live_config_reload: true
 colors:
   transparent_background_colors: false
 
+shell:
+  program: /home/albarn/.files/scripts/terminal-startup
+
 window:
   opacity: 0.8
   dimensions:
