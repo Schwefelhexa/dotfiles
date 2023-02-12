@@ -9,6 +9,7 @@ export DOCKER_BUILDKIT=0
 
 export EDITOR="nvim"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.files/scripts"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$PATH:/opt/homebrew/bin"
