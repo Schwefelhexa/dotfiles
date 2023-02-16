@@ -3,12 +3,14 @@
 # This script will open a project in a tmux session, or switch to an existing one if possible.
 
 # Select a project
-projects=$(ls -d ~/Projects/*)
-selected="$(echo "$projects" | fzf-tmux)"
+options=$(ls -d ~/Projects/*)
+options+=$(ls -d ~/Notes/*)
+options+=$(ls -d ~/Nextcloud/Uni/*)
+selected="$(echo "$options" | fzf-tmux)"
 if [ -z "$selected" ]; then
   exit 0
 fi
-name=$(basename $selected | sed 's/[ .-]/_/g' | tr '[:upper:]' '[:lower:]')
+name=$(basename "$selected" | sed 's/[ .-]/_/g' | tr '[:upper:]' '[:lower:]')
 
 # If necessary, create a new tmux session and windows
 tmux has-session -t $name 2>/dev/null
