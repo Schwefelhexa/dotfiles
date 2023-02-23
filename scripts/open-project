@@ -3,9 +3,8 @@
 # This script will open a project in a tmux session, or switch to an existing one if possible.
 
 # Select a project
-options=$(ls -d ~/Projects/*)
-options+=$(ls -d ~/Notes/*)
-options+=$(ls -d ~/Nextcloud/Uni/*)
+options=$(ls -d ~/Projects/* ~/Notes/* ~/Nextcloud/Uni/*)
+
 selected="$(echo "$options" | fzf-tmux)"
 if [ -z "$selected" ]; then
   exit 0
