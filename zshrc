@@ -26,7 +26,12 @@ fi
 # ZSH_THEME="agnoster"
 
 # Use oh-my-posh
-theme="$(brew --prefix oh-my-posh)/themes/atomic.omp.json"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    themepath="$(brew --prefix oh-my-posh)/themes"
+else
+    themepath="$HOME/.poshthemes"
+fi
+theme="$themepath/atomic.omp.json"
 eval "$(oh-my-posh init zsh --config $theme)"
 
 # Set list of themes to pick from when loading at random
