@@ -1,6 +1,6 @@
 import:
   - ~/.config/alacritty/fonts.yml
-  - ~/.config/alacritty/nord.yml
+  - ~/.config/alacritty/dracula.yml
 
 env:
   TERM: alacritty
@@ -17,9 +17,6 @@ visual_bell:
 
 live_config_reload: true
 
-colors:
-  transparent_background_colors: false
-
 shell:
   program: /bin/zsh
   args:
@@ -27,7 +24,6 @@ shell:
   - $HOME/.files/scripts/terminal-startup
 
 window:
-  opacity: 0.8
   dimensions:
     columns: 133
     lines: 40
