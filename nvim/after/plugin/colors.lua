@@ -1,3 +1,5 @@
-vim.cmd.colorscheme("catppuccin")
-vim.cmd("Catppuccin frappe")
+require('github-theme').setup({
+  theme_style = "dark",
+  -- other config
+})
 

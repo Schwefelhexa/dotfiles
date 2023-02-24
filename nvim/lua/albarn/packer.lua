@@ -102,6 +102,7 @@ return require('packer').startup(function(use)
   -- Colorschemes
   use "zbirenbaum/neodim"
   use { 'catppuccin/nvim', as = 'catppuccin' }
+  use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' })
 
   -- Silly stuff
   use "seandewar/killersheep.nvim"
