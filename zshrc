@@ -127,3 +127,4 @@ alias vim="nvim"
 alias v="tmux -c 'nvim .'"
 
 eval $(thefuck --alias)
+export PATH=$PATH:/home/albarn/.spicetify
