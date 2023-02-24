@@ -97,6 +97,7 @@ return require('packer').startup(function(use)
   use 'm4xshen/autoclose.nvim'
   use "folke/which-key.nvim"
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
+  use "theprimeagen/refactoring.nvim"
 
   -- Colorschemes
   use "zbirenbaum/neodim"
