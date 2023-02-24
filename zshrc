@@ -10,9 +10,13 @@ export DOCKER_BUILDKIT=0
 export EDITOR="nvim"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.files/scripts"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$PATH:/opt/homebrew/bin"
+else
+    export PATH="$PATH:$HOME/.spicetify"
+    export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
 fi
 
 # Set name of the theme to load --- if set to "random", it will
