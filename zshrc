@@ -32,7 +32,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 else
     themepath="$HOME/.poshthemes"
 fi
-theme="$themepath/atomic.omp.json"
+theme="$themepath/blueish.omp.json"
 eval "$(oh-my-posh init zsh --config $theme)"
 
 # Set list of themes to pick from when loading at random
