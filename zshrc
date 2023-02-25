@@ -11,13 +11,14 @@ export EDITOR="nvim"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.files/scripts"
 export PATH="$PATH:$HOME/.cargo/bin"
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$PATH:/opt/homebrew/bin"
 else
     export PATH="$PATH:$HOME/.spicetify"
     export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
 fi
+
+export RUSTC_WRAPPER=sccache
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -125,6 +126,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 alias v="tmux -c 'nvim .'"
+
+alias ls="exa"
+alias l="exa -l"
+alias ll="exa -l --git"
+alias la="exa -la"
+alias lla="exa -la --git"
+alias lt="exa -T"
+
+alias cat="bat"
 
 eval $(thefuck --alias)
 export PATH=$PATH:/home/albarn/.spicetify
