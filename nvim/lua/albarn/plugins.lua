@@ -104,6 +104,10 @@ local plugins = {
 
   -- Copilot
   "github/Copilot.vim",
+
+  -- Notes
+  "renerocksai/telekasten.nvim",
+  "renerocksai/calendar-vim"
 }
 
 require("lazy").setup(plugins, {})
