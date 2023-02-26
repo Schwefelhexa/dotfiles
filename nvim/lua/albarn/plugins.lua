@@ -107,7 +107,10 @@ local plugins = {
 
   -- Notes
   "renerocksai/telekasten.nvim",
-  "renerocksai/calendar-vim"
+  "renerocksai/calendar-vim",
+
+  -- Time Tracking
+  "wakatime/vim-wakatime",
 }
 
 require("lazy").setup(plugins, {})
