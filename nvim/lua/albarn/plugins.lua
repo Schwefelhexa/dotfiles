@@ -74,14 +74,6 @@ local plugins = {
       { 'nvim-lua/popup.nvim' },
     },
   },
-  {
-    'glepnir/dashboard-nvim',
-    event = 'VimEnter',
-    config = function ()
-      require("albarn.dashboard")
-    end,
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-  },
   "mbbill/undotree",
 
   -- Utilities
@@ -112,6 +104,9 @@ local plugins = {
 
   -- Time Tracking
   "wakatime/vim-wakatime",
+
+  -- Misc
+  { "echasnovski/mini.nvim", version = "*" },
 }
 
 require("lazy").setup(plugins, {})

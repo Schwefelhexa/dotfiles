@@ -1,1 +1,2 @@
-require("autoclose").setup({})
+-- require("autoclose").setup({})
+require("mini.pairs").setup()
