@@ -128,11 +128,9 @@ alias vim="nvim"
 alias v="tmux -c 'nvim .'"
 
 alias ls="exa"
-alias l="exa -l"
-alias ll="exa -l --git"
-alias la="exa -la"
-alias lla="exa -la --git"
-alias lt="exa -T"
+alias l="exa -l --git"
+alias la="exa -la --git"
+alias lt="exa -T --git"
 
 alias cat="bat"
 
