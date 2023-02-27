@@ -93,6 +93,7 @@ local plugins = {
 
   -- Colorschemes
   "zbirenbaum/neodim",
+  "folke/tokyonight.nvim",
   { 'catppuccin/nvim', as = 'catppuccin' },
   { 'projekt0n/github-nvim-theme', tag = 'v0.0.7' },
 

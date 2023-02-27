@@ -1,5 +1,2 @@
-require('github-theme').setup({
-  theme_style = "dark",
-  -- other config
-})
+vim.cmd("colorscheme tokyonight-moon")
 
