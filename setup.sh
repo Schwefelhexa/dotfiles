@@ -3,7 +3,7 @@
 mkdir $HOME/.config
 
 # Symlink to $HOME/.config
-configdirs=(alacritty btop nvim ranger bspwm sxhkd polybar)
+configdirs=(alacritty btop nvim ranger bspwm sxhkd polybar offlineimap)
 for d in "${configdirs[@]}"
 do
   target=$HOME/.config/$d 
