@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Spam mails
+notmuch tag +spam -new -- tag:new AND subject:"*****SPAM*****"
+

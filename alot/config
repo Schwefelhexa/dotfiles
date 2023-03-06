@@ -1,0 +1,69 @@
+[global]
+  quit_on_last_bclose = true
+
+[tags]
+
+  [[flagged]]
+    translated = ⚑
+    normal = '','','light green','','light green',''
+    focus = '','','light green','','light green',''
+
+  [[unread]]
+    translated = ✉
+
+  [[replied]]
+    translated = ⏎
+
+  [[encrypted]]
+    translated = ⚷
+
+  [[inbox]]
+    translated = 
+
+  [[attachment]]
+    translated = 󰁦
+
+  [[spam]]
+    translated = 󰈸
+    normal = '','','light red','','light red',''
+    focus = '','','light red','','light red',''
+
+  [[signed]]
+    translated = 
+
+[bindings]
+  [[thread]]
+  b = call hooks.open_in_browser(ui)
+  [[search]]
+  i = search tag:inbox AND NOT tag:killed AND NOT tag:spam
+  u = search tag:inbox AND NOT tag:killed AND NOT tag:spam AND tag:unread
+  y = search tag:inbox AND NOT tag:killed AND NOT tag:spam AND tag:flagged
+  Y = search tag:inbox AND NOT tag:killed AND NOT tag:spam AND tag:flagged AND tag:unread
+  r = refresh
+
+[accounts]
+    [[rwth]]
+        realname = Alexander Baron
+        address = alexander.baron1@rwth-aachen.de
+        sendmail_command = msmtp --account=rwth -t
+        sent_box = maildir:///home/albarn/Mail/RWTH/Sent
+        draft_box = maildir:///home/albarn/Mail/RWTH/Drafts
+    [[embedded]]
+        realname = Alexander Baron
+        address = baron@embedded.rwth-aachen.de
+        sendmail_command = msmtp --account=embedded -t
+        sent_box = maildir:///home/albarn/Mail/Embedded/Sent
+        draft_box = maildir:///home/albarn/Mail/Embedded/Drafts
+    [[halifax]]
+        realname = Alexander Baron
+        address = albarn@halifax.rwth-aachen.de
+        sendmail_command = msmtp --account=halifax -t
+        sent_box = maildir:///home/albarn/Mail/Halifax/Sent
+        draft_box = maildir:///home/albarn/Mail/Halifax/Drafts
+    [[personal]]
+        realname = Alexander Baron
+        address = alexander@baron-online.eu
+        sendmail_command = msmtp --account=personal -t
+        sent_box = maildir:///home/albarn/Mail/Personal/Sent
+        draft_box = maildir:///home/albarn/Mail/Personal/Drafts
+

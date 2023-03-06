@@ -1,0 +1,7 @@
+#!/bin/bash
+
+offlineimap -a RWTH &
+offlineimap -a Halifax &
+offlineimap -a Embedded &
+offlineimap -a Personal &
+

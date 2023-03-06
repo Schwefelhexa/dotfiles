@@ -1,11 +1,13 @@
 [general]
 accounts = RWTH,Embedded,Personal,Halifax
-ui = Quiet
 pythonfile = ~/.config/offlineimap/offlineimap.py
 
 [Account RWTH]
 localrepository = RWTH-Local
 remoterepository = RWTH-Remote
+autorefresh = 0.5
+postsynchook = notmuch new
+idlefolders = ['INBOX']
 
 [Repository RWTH-Remote]
 type = IMAP
@@ -21,6 +23,9 @@ localfolders = ~/Mail/RWTH
 [Account Embedded]
 localrepository = Embedded-Local
 remoterepository = Embedded-Remote
+autorefresh = 0.5
+postsynchook = notmuch new
+idlefolders = ['INBOX']
 
 [Repository Embedded-Remote]
 type = IMAP
@@ -36,6 +41,9 @@ localfolders = ~/Mail/Embedded
 [Account Personal]
 localrepository = Personal-Local
 remoterepository = Personal-Remote
+autorefresh = 0.5
+postsynchook = notmuch new
+idlefolders = ['INBOX']
 
 [Repository Personal-Remote]
 type = IMAP
@@ -51,6 +59,9 @@ localfolders = ~/Mail/Personal
 [Account Halifax]
 localrepository = Halifax-Local
 remoterepository = Halifax-Remote
+autorefresh = 0.5
+postsynchook = notmuch new
+idlefolders = ['INBOX']
 
 [Repository Halifax-Remote]
 type = IMAP

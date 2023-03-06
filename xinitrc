@@ -19,6 +19,8 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
+run-offlineimap
+
 # start window manager
 exec $1
 
