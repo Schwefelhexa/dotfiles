@@ -1,5 +1,9 @@
 #!/bin/bash
 
 # Spam mails
-notmuch tag +spam -new -- tag:new AND subject:"*****SPAM*****"
+notmuch tag +spam -- tag:new AND subject:"*****SPAM*****"
+
+
+# Remove new tag
+notmuch tag -new -- tag:new
 
