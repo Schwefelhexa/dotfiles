@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# This script will open a project in a tmux session, or switch to an existing one if possible.
+
+name="$1"
+folder="$2"
+first_command="$3"
+
+# If necessary, create a new tmux session and windows
+tmux has-session -t $name 2>/dev/null
+if [ $? != 0 ]; then
+  tmux new-session -d -s "$name" -c "$folder" "$first_command"
+
+  # Run commands
+  for ((i = 4; i <= $#; i++)); do
+    command="${!i}"
+    tmux new-window -d -t "$name":"$((i-2))" -c "$folder" "$command"
+  done
+
+  tmux select-window -t "$name":1
+fi
+

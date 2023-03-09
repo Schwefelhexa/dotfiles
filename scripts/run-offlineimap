@@ -1,7 +1,9 @@
-#!/bin/bash
+#!/bin/zsh
 
 offlineimap -a RWTH &
 offlineimap -a Halifax &
 offlineimap -a Embedded &
 offlineimap -a Personal &
+
+wait
 

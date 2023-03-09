@@ -11,19 +11,3 @@ if [ -z "$selected" ]; then
 fi
 name=$(basename "$selected" | sed 's/[ .-]/_/g' | tr '[:upper:]' '[:lower:]')
 
-# If necessary, create a new tmux session and windows
-tmux has-session -t $name 2>/dev/null
-if [ $? != 0 ]; then
-  tmux new-session -d -s "$name" -c "$selected" nvim
-  tmux new-window -d -t "$name":2 -c "$selected"
-
-  tmux select-window -t "$name":1
-fi
-
-# Switch to the project
-if [ -n "$TMUX" ]; then
-  tmux switch-client -t "$name"
-else
-  tmux attach-session -t "$name"
-fi
-

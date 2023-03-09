@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# This script will open a project in a tmux session, or switch to an existing one if possible.
+
+name="$1"
+folder="$2"
+first_command="$3"
+
+create-session "${@}"
+
+# Switch to the project
+if [ -n "$TMUX" ]; then
+  tmux switch-client -t "$name"
+else
+  tmux attach-session -t "$name"
+fi
+
