@@ -2,6 +2,7 @@
 
 # Spam mails
 notmuch tag +spam -- tag:new AND subject:"*****SPAM*****"
+notmuch tag -unread -- tag:spam
 
 
 # Remove new tag
