@@ -11,3 +11,5 @@ if [ -z "$selected" ]; then
 fi
 name=$(basename "$selected" | sed 's/[ .-]/_/g' | tr '[:upper:]' '[:lower:]')
 
+create-or-open-session $name $selected nvim zsh
+

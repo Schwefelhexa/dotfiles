@@ -4,14 +4,5 @@
 
 source ~/.zshrc
 
-tmux has-session -t base
-if [ $? -ne 0 ]; then
-    tmux new -s base
-fi
-
-if [ -n "$TMUX" ]; then
-  tmux switch-client -t base
-else
-  tmux attach-session -t base
-fi
+create-or-open-session base ~ zsh
 
