@@ -31,6 +31,7 @@ initial_command = search tag:inbox AND NOT tag:killed AND NOT tag:spam
   # "new" tag indicates unprocessed mail
   [[new]]
     translated = 󰬢
+
 [bindings]
   [[thread]]
   b = call hooks.open_in_browser(ui)
@@ -39,7 +40,10 @@ initial_command = search tag:inbox AND NOT tag:killed AND NOT tag:spam
   u = search tag:inbox AND NOT tag:killed AND NOT tag:spam AND tag:unread
   y = search tag:inbox AND NOT tag:killed AND NOT tag:spam AND tag:flagged
   Y = search tag:inbox AND NOT tag:killed AND NOT tag:spam AND tag:flagged AND tag:unread
+  * = search *
   r = refresh
+  # Soft-delete
+  x = toggletags inbox
 
 [accounts]
     [[rwth]]
