@@ -3,12 +3,12 @@ initial_command = search tag:inbox AND NOT tag:killed AND NOT tag:spam
 [tags]
 
   [[flagged]]
-    translated = ⚑
-    normal = '','','light green','','light green',''
-    focus = '','','light green','','light green',''
+    translated = 
+    normal = '','','light red','','light red',''
+    focus = '','','light red','','light red',''
 
   [[unread]]
-    translated = ✉
+    translated = 
 
   [[replied]]
     translated = ⏎
@@ -24,12 +24,13 @@ initial_command = search tag:inbox AND NOT tag:killed AND NOT tag:spam
 
   [[spam]]
     translated = 󰈸
-    normal = '','','light red','','light red',''
-    focus = '','','light red','','light red',''
 
   [[signed]]
     translated = 
 
+  # "new" tag indicates unprocessed mail
+  [[new]]
+    translated = 󰬢
 [bindings]
   [[thread]]
   b = call hooks.open_in_browser(ui)
