@@ -1,5 +1,4 @@
-[global]
-  quit_on_last_bclose = true
+initial_command = search tag:inbox AND NOT tag:killed AND NOT tag:spam
 
 [tags]
 
