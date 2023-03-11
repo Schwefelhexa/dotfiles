@@ -1,9 +1,14 @@
 #!/bin/zsh
 
+# Kill off running instances
+kill $(ps | grep "offlineimap -a" | cut -d " " -f1) >> /dev/null 2>&1
+
+# Start offlineimap processes
 offlineimap -a RWTH &
 offlineimap -a Halifax &
 offlineimap -a Embedded &
 offlineimap -a Personal &
 
+# Keep the terminal blocked
 wait
 
