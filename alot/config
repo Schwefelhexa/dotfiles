@@ -1,4 +1,4 @@
-initial_command = search tag:inbox AND NOT tag:killed AND NOT tag:spam
+initial_command = search tag:inbox AND NOT tag:killed AND NOT tag:spam AND tag:unread
 
 [tags]
 
