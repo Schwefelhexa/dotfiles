@@ -1,0 +1,35 @@
+defaults
+auth    on
+tls     on
+tls_trust_file  /etc/ssl/certs/ca-certificates.crt
+port        587
+
+# Personal
+account     personal
+from        alexander@baron-online.eu
+user        m02bc512
+host        w00a0b75.kasserver.com
+passwordeval    op item get "Personal Mail" --fields label=password
+
+# RWTH
+account     rwth
+from        alexander.baron1@rwth-aachen.de
+user        cp601314@rwth-aachen.de
+host        mail.rwth-aachen.de
+passwordeval    op item get "RWTH Mail" --fields label=password
+
+# Embedded
+account     embedded
+from        baron@embedded.rwth-aachen.de
+user        cp601314@embedded.rwth-aachen.de
+host        mail.rwth-aachen.de
+passwordeval    op item get "Embedded Mail" --fields label=password
+
+# Halifax
+account     halifax
+from        albarn@halifax.rwth-aachen.de
+user        albarn
+host        mail.halifax.rwth-aachen.de
+passwordeval    op item get "Halifax Mail" --fields label=password
+
+account default : personal
