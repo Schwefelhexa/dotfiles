@@ -20,3 +20,7 @@ do
   ln -s $HOME/.files/$d $target
 done
 
+# Special maildir fun
+ln -s ~/.files/notmuch/default/config ~/.notmuch-config
+ln -s $HOME/Mail /var/spool/mail/albarn
+
