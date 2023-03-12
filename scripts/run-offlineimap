@@ -3,6 +3,9 @@
 # Kill off running instances
 kill $(ps | grep "offlineimap -a" | cut -d " " -f1) >> /dev/null 2>&1
 
+# Authorize 1Password
+op signin
+
 # Start offlineimap processes
 offlineimap -a RWTH &
 offlineimap -a Halifax &
