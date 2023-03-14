@@ -9,8 +9,12 @@ local function eval(command, fallback)
   return result
 end
 
-local header = eval("botsay -c $(curl --no-progress-meter https://icanhazdadjoke.com)", "No botsay, no fun :(")
+local header = eval("~/.files/nvim/bin/random_joke", "No joke today :(")
 local stats = require("lazy").stats()
+
+local function download_jokes()
+  eval("~/.files/nvim/bin/fetch_jokes", "Failed to download jokes :(")
+end
 
 require("mini.starter").setup({
   header = header,
@@ -21,3 +25,5 @@ require("mini.starter").setup({
   },
   footer = "🚀 Loaded " .. stats.loaded .. " plugins. Blazingly fast! 🚀"
 })
+
+vim.keymap.set('n', '<leader>d', download_jokes)

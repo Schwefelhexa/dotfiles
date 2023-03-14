@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Make sure jokes exist
+~/.files/nvim/bin/fetch_jokes
+
+path=$(~/.files/nvim/bin/fetch_jokes path)
+joke=$(shuf -n 1 $path)
+joke=$(echo "${joke:1:${#joke}-2}") # Remove wrapping quotes
+echo $joke | awk '{gsub(/\\r/,"")}1' \
+  | awk '{gsub(/\\n/,"\n")}1' \
+  | cowsay -f $(ls /usr/share/cows/ | grep "\.cow" | shuf -n 1)  # Use a random cow - be warned, these can be pretty inappropriate
+

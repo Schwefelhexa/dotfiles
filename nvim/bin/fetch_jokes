@@ -1,0 +1,34 @@
+#/bin/bash
+
+# Downloads all jokes from the awesome http://icanhazdadjoke.com/ API
+
+mkdir -p $HOME/.files/nvim/data
+filepath="$HOME/.files/nvim/data/jokes.txt"
+
+fetch_jokes() {
+  meta=$(curl -s -H "Accept: application/json" https://icanhazdadjoke.com/search)
+  pages=$(echo $meta | jq .total_pages)
+
+  rm "$filepath" 2>/dev/null
+
+  for i in $(seq 1 $pages); do
+    jokes=$(curl -s -H "Accept: application/json" "https://icanhazdadjoke.com/search?page=$i")
+    echo $jokes | jq ".results[] | .joke" >> "$filepath"
+  done
+}
+
+# return filepath for use by other scripts
+if [ "$1" = "path" ]; then
+  echo "$filepath"
+  exit 0
+fi
+
+# explicit update
+if [ "$1" = "update" ]; then
+  fetch_jokes
+fi
+
+if [ ! -f "$filepath" ]; then
+  fetch_jokes
+fi
+
