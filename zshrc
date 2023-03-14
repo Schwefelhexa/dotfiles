@@ -141,3 +141,5 @@ alias cat="bat"
 
 eval $(thefuck --alias)
 export PATH=$PATH:/home/albarn/.spicetify
+
+PF_INFO="ascii title os uptime pkgs memory shell editor wm" pfetch
