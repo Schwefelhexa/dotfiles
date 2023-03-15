@@ -16,78 +16,63 @@ local plugins = {
 
   -- Navigation
   {
-    'nvim-telescope/telescope.nvim', branch = '0.1.x',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    "nvim-telescope/telescope.nvim",
+    branch = "0.1.x",
+    dependencies = { "nvim-lua/plenary.nvim" },
   },
-  { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 },
-  'ggandor/leap.nvim',
+  { "nvim-telescope/telescope-fzf-native.nvim", run = "make",     cond = vim.fn.executable "make" == 1 },
+  "ggandor/leap.nvim",
   "theprimeagen/harpoon",
 
   -- LSP
   {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v1.x',
+    "VonHeikemen/lsp-zero.nvim",
+    branch = "v1.x",
     dependencies = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' },
-      { 'williamboman/mason.nvim' },
-      { 'williamboman/mason-lspconfig.nvim' },
+      "neovim/nvim-lspconfig",
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },
-      { 'hrsh7th/cmp-buffer' },
-      { 'hrsh7th/cmp-path' },
-      { 'saadparwaiz1/cmp_luasnip' },
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'hrsh7th/cmp-nvim-lua' },
-
-      -- Snippets
-      { 'L3MON4D3/LuaSnip' },
-      { 'rafamadriz/friendly-snippets' },
+      "hrsh7th/nvim-cmp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "saadparwaiz1/cmp_luasnip",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lua",
 
       -- Status info
-      { 'j-hui/fidget.nvim' },
+      "j-hui/fidget.nvim",
     },
   },
 
   -- Basic UI
-  'voldikss/vim-floaterm',
+  "voldikss/vim-floaterm",
+  "nvim-lualine/lualine.nvim",
   {
-    'nvim-lualine/lualine.nvim',
-  },
-  {
-    'nvim-neo-tree/neo-tree.nvim',
+    "nvim-neo-tree/neo-tree.nvim",
     dependencies = { { "MunifTanjim/nui.nvim", module = "nui" }, "nvim-tree/nvim-web-devicons" },
   },
 
   -- Improved UI
-  { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
+  { "nvim-treesitter/nvim-treesitter",          run = ":TSUpdate" },
   "nvim-treesitter/nvim-treesitter-context",
   "folke/todo-comments.nvim",
-  'lukoshkin/trailing-whitespace', -- Highlight trailing whitespace
-  "folke/trouble.nvim",
+  "lukoshkin/trailing-whitespace",       -- Highlight trailing whitespace
   "lewis6991/gitsigns.nvim",
-  'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
-  {
-    "sudormrfbin/cheatsheet.nvim",
-    dependencies = {
-      { 'nvim-lua/popup.nvim' },
-    },
-  },
-  "mbbill/undotree",
+  "lukas-reineke/indent-blankline.nvim", -- Add indentation guides even on blank lines
 
   -- Utilities
   "tversteeg/registers.nvim",
-  'm4xshen/autoclose.nvim',
+  "m4xshen/autoclose.nvim",
   "folke/which-key.nvim",
-  'numToStr/Comment.nvim', -- "gc" to comment visual regions/lines
+  "numToStr/Comment.nvim", -- "gc" to comment visual regions/lines
   "theprimeagen/refactoring.nvim",
 
   -- Colorschemes
   "zbirenbaum/neodim",
   "folke/tokyonight.nvim",
-  { 'catppuccin/nvim', as = 'catppuccin' },
-  { 'projekt0n/github-nvim-theme', tag = 'v0.0.7' },
 
   -- Silly stuff
   "seandewar/killersheep.nvim",
@@ -100,7 +85,6 @@ local plugins = {
 
   -- Notes
   "renerocksai/telekasten.nvim",
-  "renerocksai/calendar-vim",
 
   -- Time Tracking
   "wakatime/vim-wakatime",
