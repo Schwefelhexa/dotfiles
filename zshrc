@@ -32,6 +32,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias shuf="gshuf"
 fi
 
+bindkey '^R' history-incremental-search-backward
+
 alias pfetch='PF_INFO="ascii title os uptime pkgs memory shell editor wm" pfetch'
 pfetch
 
