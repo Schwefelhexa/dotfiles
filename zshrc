@@ -17,6 +17,8 @@ export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$PATH:$HOME/.cargo/bin"
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$PATH:/opt/homebrew/bin"
+
+    alias shuf="gshuf"
 else
     export PATH="$PATH:$HOME/.spicetify"
     export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
