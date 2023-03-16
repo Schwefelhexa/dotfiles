@@ -132,10 +132,10 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim"
 alias v="tmux -c 'nvim .'"
 
-alias ls="exa"
-alias l="exa -l --git"
-alias la="exa -la --git"
-alias lt="exa -T --git"
+alias ls="exa --icons"
+alias  l="exa --icons --header -l --git"
+alias la="exa --icons --header -la --git"
+alias lt="exa --icons -T --git"
 
 alias cat="bat"
 
