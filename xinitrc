@@ -21,6 +21,11 @@ fi
 
 run-offlineimap
 
+xrandr --dpi 96 \
+  --output DP-0 --mode 3440x1440 --rate 165 --pos 0x600 --primary \
+  --output HDMI-0 --mode 1920x1080 --rate 60 --pos 3440x1080 \
+  --output DP-2 --mode 1920x1080 --rate 60 --pos 3440x0
+
 # start window manager
 exec $1
 
