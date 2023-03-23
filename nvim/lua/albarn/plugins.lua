@@ -86,9 +86,6 @@ local plugins = {
   -- Notes
   "renerocksai/telekasten.nvim",
 
-  -- Time Tracking
-  "wakatime/vim-wakatime",
-
   -- Misc
   { "echasnovski/mini.nvim", version = "*" },
 }
