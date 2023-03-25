@@ -72,7 +72,7 @@ local plugins = {
 
   -- Colorschemes
   "zbirenbaum/neodim",
-  "folke/tokyonight.nvim",
+  "catppuccin/nvim",
 
   -- Silly stuff
   "seandewar/killersheep.nvim",
