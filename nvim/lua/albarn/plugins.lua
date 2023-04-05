@@ -76,7 +76,8 @@ local plugins = {
   "theprimeagen/refactoring.nvim",
 
   -- Colorschemes
-  "rose-pine/neovim",
+  "zbirenbaum/neodim",
+  "catppuccin/nvim",
 
   -- Silly stuff
   "seandewar/killersheep.nvim",
