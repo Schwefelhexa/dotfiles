@@ -2,6 +2,7 @@
 
 # This creates/attaches to a tmux session named "base"
 
+source ~/.zshenv
 source ~/.zshrc
 
 create-or-open-session base ~ zsh
