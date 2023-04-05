@@ -27,6 +27,7 @@ alias lt="exa --icons -T --git"
 alias cat="bat"
 
 eval $(thefuck --alias)
+eval "$(pyenv init -)"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias shuf="gshuf"
@@ -34,6 +35,12 @@ fi
 
 bindkey '^R' history-incremental-search-backward
 
-alias pfetch='PF_INFO="ascii title os uptime pkgs memory shell editor wm" pfetch'
+# Pastebin alternative from the CLI 🤯
+function paste() {
+    local file=${1:-/dev/stdin}
+    curl --data-binary @${file} https://paste.rs
+}
+
+alias pfetch='PF_INFO="ascii title os host uptime pkgs memory editor wm de palette" pfetch'
 pfetch
 
