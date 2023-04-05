@@ -4,7 +4,7 @@
 kill $(ps | grep "offlineimap -a" | cut -d " " -f1) >> /dev/null 2>&1
 
 # Authorize 1Password
-op signin
+/usr/local/bin/op signin
 
 if echo $* | grep -e "--once" -q
 then
