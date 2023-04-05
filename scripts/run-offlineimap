@@ -6,12 +6,16 @@ kill $(ps | grep "offlineimap -a" | cut -d " " -f1) >> /dev/null 2>&1
 # Authorize 1Password
 op signin
 
-# Start offlineimap processes
-offlineimap -a RWTH &
-offlineimap -a Halifax &
-offlineimap -a Embedded &
-offlineimap -a Personal &
+if echo $* | grep -e "--once" -q
+then
+  offlineimap
+else
+  # Start offlineimap processes
+  offlineimap -a RWTH &
+  offlineimap -a Halifax &
+  offlineimap -a Embedded &
+  offlineimap -a Personal &
 
-# Keep the terminal blocked
-wait
-
+  # Keep the terminal blocked
+  wait
+fi
