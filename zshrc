@@ -17,14 +17,30 @@ fi
 theme="$themepath/montys.omp.json"
 eval "$(oh-my-posh init zsh --config $theme)"
 
-alias vim="nvim"
+function vim() {
+  nvim "$@" || /usr/bin/vim "$@"
+}
 
-alias ls="exa --icons"
-alias  l="exa --icons --header -l --git"
-alias la="exa --icons --header -la --git"
-alias lt="exa --icons -T --git"
+# Thanks, https://salferrarello.com/zsh-alias-with-fallback !
+function ls() {
+  exa --icons "$@" || /usr/bin/ls "$@"
+}
+function l() {
+  exa --icons --header -l --git "$@" || /usr/bin/ls -lh "$@"
+}
+function la() {
+  exa --icons --header -la --git "$@" || /usr/bin/ls -lah "$@"
+}
+function lf() {
+  exa --icons --group-directories-first -l -h -H -m -u -U --git "$@" || /usr/bin/ls -lah "$@"
+}
+function lt() {
+  exa --icons -T --git "$@" || /usr/bin/ls -lah "$@"
+}
 
-alias cat="bat"
+function cat() {
+  bat "$@" || /usr/bin/cat "$@"
+}
 
 eval $(thefuck --alias)
 eval "$(pyenv init -)"
