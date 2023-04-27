@@ -50,7 +50,7 @@ initial_command = search tag:inbox AND NOT tag:killed AND NOT tag:spam AND tag:u
         realname = Alexander Baron
         address = alexander.baron1@rwth-aachen.de
         sendmail_command = msmtp --account=rwth -t
-        sent_box = maildir://~/Mail/RWTH/Sent
+        sent_box = maildir://~/Mail/RWTH/Gesendete\ Elemente
         draft_box = maildir://~/Mail/RWTH/Drafts
     [[embedded]]
         realname = Alexander Baron
