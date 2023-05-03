@@ -19,7 +19,7 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-run-offlineimap
+picom &
 
 xrandr --dpi 96 \
   --output DP-0 --mode 3440x1440 --rate 165 --pos 0x600 --primary \
