@@ -8,14 +8,8 @@
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="agnoster"
 
-# Use oh-my-posh
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    themepath="$(brew --prefix oh-my-posh)/themes"
-else
-    themepath="$HOME/.poshthemes"
-fi
-theme="$themepath/montys.omp.json"
-eval "$(oh-my-posh init zsh --config $theme)"
+# Starship prompt
+eval "$(starship init zsh)"
 
 function vim() {
   nvim "$@" || /usr/bin/vim "$@"

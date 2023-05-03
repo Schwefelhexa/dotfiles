@@ -3,16 +3,16 @@
 mkdir $HOME/.config
 
 # Symlink to $HOME/.config
-configdirs=(alacritty btop nvim ranger bspwm sxhkd polybar offlineimap notmuch alot msmtp spicetify)
+configdirs=(alacritty btop nvim ranger bspwm sxhkd polybar offlineimap notmuch alot msmtp spicetify starship.toml)
 for d in "${configdirs[@]}"
 do
-  target=$HOME/.config/$d 
+  target=$HOME/.config/$d
   [ -f $target ] && unlink $target || rm -rf $target
   ln -s $HOME/.files/$d $target
 done
 
 # Symlink to $HOME
-homedirs=(tmux.conf xinitrc zshrc zshenv)
+homedirs=(tmux.conf xinitrc zshrc zshenv notmuch-config)
 for d in "${homedirs[@]}"
 do
   target=$HOME/.$d 
@@ -21,6 +21,5 @@ do
 done
 
 # Special maildir fun
-ln -s ~/.files/notmuch/default/config ~/.notmuch-config
 ln -s $HOME/Mail /var/spool/mail/albarn
 
