@@ -20,6 +20,7 @@ if [ -f "$usermodmap" ]; then
 fi
 
 picom &
+feh --bg-fill ~/.files/Wallpapers/catppuccin.png
 
 xrandr --dpi 96 \
   --output DP-0 --mode 3440x1440 --rate 165 --pos 0x600 --primary \
