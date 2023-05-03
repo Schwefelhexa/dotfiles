@@ -4,6 +4,7 @@ palette = "catppuccin_macchiato"
 add_newline = false
 
 directory.truncation_symbol = "📁/"
+hostname.ssh_symbol = '🌏 '
 
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"
