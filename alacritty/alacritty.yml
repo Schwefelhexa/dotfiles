@@ -1,9 +1,9 @@
 import:
   - ~/.config/alacritty/fonts.yml
-  - ~/.config/alacritty/dracula.yml
+  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
 
 env:
-  TERM: alacritty
+  TERM: screen-256color-bce
 
 cursor:
   style:
