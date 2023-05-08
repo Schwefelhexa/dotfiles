@@ -1,3 +1,8 @@
+# General options
+setopt beep extendedglob nomatch notify
+unsetopt autocd
+bindkey -v
+
 # Starship prompt
 eval "$(starship init zsh)"
 
