@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Check if should open as floating
+if [ "$1" = "--float" ]; then
+  alacritty --class "modal" -e "$SHELL"
+else
+  alacritty
+fi
+

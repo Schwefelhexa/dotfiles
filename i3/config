@@ -38,16 +38,6 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPause exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -62,9 +52,6 @@ floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
-
-# start a terminal
-bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -210,3 +197,14 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# ======== Rules ========
+for_window [window_role="pop-up"]                       floating enable, move position center, resize set height 50ppt, move position center
+for_window [class="1Password"]                          floating enable, move position center, resize set height 50ppt, move position center
+for_window [class="modal"]                              floating enable, move position center, resize set height 50ppt, move position center
+for_window [window_role="bubble"]                       floating enable, move position center, resize set height 50ppt, move position center
+for_window [window_role="task_dialog"]                  floating enable, move position center, resize set height 50ppt, move position center
+for_window [window_role="Preferences"]                  floating enable, move position center, resize set height 50ppt, move position center
+for_window [window_type="dialog"]                       floating enable, move position center, resize set height 50ppt, move position center
+for_window [window_type="menu"]                         floating enable, move position center, resize set height 50ppt, move position center
+
