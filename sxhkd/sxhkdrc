@@ -7,9 +7,6 @@ super + {_,shift +} Return
 super + shift + alt + Return
   xterm
 
-super + f
-	firefox-developer-edition
-
 # Reload sxhkdrc
 super + shift + r
     pkill -usr1 -x sxhkd; notify-send 'SXHKD config reloaded' -t 1500
