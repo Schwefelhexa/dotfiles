@@ -74,6 +74,7 @@ local plugins = {
   "folke/which-key.nvim",
   "numToStr/Comment.nvim", -- "gc" to comment visual regions/lines
   "theprimeagen/refactoring.nvim",
+  "kylechui/nvim-surround",
 
   -- Colorschemes
   "zbirenbaum/neodim",
