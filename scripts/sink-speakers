@@ -1,0 +1,1 @@
+pactl set-default-sink $(pactl list short sinks | grep 'pci.*analog-stereo' | cut -f2)
