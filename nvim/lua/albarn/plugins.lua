@@ -81,6 +81,7 @@ local plugins = {
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
+  'jghauser/mkdir.nvim', -- Create missing directories when writing a file
 
   -- Colorschemes
   "zbirenbaum/neodim",
