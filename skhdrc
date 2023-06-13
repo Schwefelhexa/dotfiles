@@ -1,0 +1,58 @@
+# focus windows
+meh - l: yabai -m window --focus east
+meh - h: yabai -m window --focus west
+meh - j: yabai -m window --focus south
+meh - k: yabai -m window --focus north
+
+# move windows
+hyper - l: yabai -m window --swap east
+hyper - h: yabai -m window --swap west
+hyper - j: yabai -m window --swap south
+hyper - k: yabai -m window --swap north
+
+# fullscreen, floating, etc
+meh - o: yabai -m window --toggle zoom-fullscreen
+meh + shift - o: yabai -m window --toggle float
+
+# spaces
+meh - 0x21 : yabai -m space --focus prev # [
+meh - 0x1E: yabai -m space --focus next # ]
+
+meh - 1: yabai -m space --focus 1
+meh - 2: yabai -m space --focus 2
+meh - 3: yabai -m space --focus 3
+meh - 4: yabai -m space --focus 4
+meh - 5: yabai -m space --focus 5
+meh - 6: yabai -m space --focus 6
+meh - 7: yabai -m space --focus 7
+meh - 8: yabai -m space --focus 8
+meh - 9: yabai -m space --focus 9
+
+meh - n: yabai -m space --create
+meh - x: yabai -m space --destroy
+
+# move windows in spaces
+hyper - 0x21 : yabai -m window --space prev && yabai -m space --focus prev # [
+hyper - 0x1E: yabai -m window --space next && yabai -m space --focus next # ]
+hyper - 1: yabai -m window --space 1 && yabai -m space --focus 1
+hyper - 2: yabai -m window --space 2 && yabai -m space --focus 2
+hyper - 3: yabai -m window --space 3 && yabai -m space --focus 3
+hyper - 4: yabai -m window --space 4 && yabai -m space --focus 4
+hyper - 5: yabai -m window --space 5 && yabai -m space --focus 5
+hyper - 6: yabai -m window --space 6 && yabai -m space --focus 6
+hyper - 7: yabai -m window --space 7 && yabai -m space --focus 7
+hyper - 8: yabai -m window --space 8 && yabai -m space --focus 8
+hyper - 9: yabai -m window --space 9 && yabai -m space --focus 9
+hyper - 0: yabai -m window --space 10 && yabai -m space --focus 10
+
+# Application shortcuts
+meh - a: open -a WezTerm
+meh - s: open -a Arc
+meh - t: open -a Todoist
+meh - w: open -a /Applications/WhatsApp.app
+meh - q: open -a Signal
+meh - r: open -a Telegram
+meh - e: open -a Finder
+meh - m: open -a Mail
+meh - z: open -a Calendar
+

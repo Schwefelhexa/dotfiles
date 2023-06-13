@@ -12,10 +12,10 @@ do
 done
 
 # Symlink to $HOME
-homedirs=(tmux.conf xinitrc zshrc zshenv notmuch-config)
+homedirs=(tmux.conf xinitrc zshrc zshenv notmuch-config yabairc skhdrc)
 for d in "${homedirs[@]}"
 do
-  target=$HOME/.$d 
+  target=$HOME/.$d
   [ -f $target ] && unlink $target || rm -rf $target
   ln -s $HOME/.files/$d $target
 done
