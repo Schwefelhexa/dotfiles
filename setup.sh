@@ -12,7 +12,7 @@ do
 done
 
 # Symlink to $HOME
-homedirs=(tmux.conf xinitrc zshrc zshenv notmuch-config yabairc skhdrc)
+homedirs=(tmux.conf xinitrc zshrc zshenv notmuch-config yabairc skhdrc wezterm.lua)
 for d in "${homedirs[@]}"
 do
   target=$HOME/.$d
