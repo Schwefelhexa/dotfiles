@@ -72,3 +72,5 @@ yabai -m rule --add app=Firefox space=^2
 yabai -m rule --add title=WhatsApp space=^3
 yabai -m rule --add app=Telegram space=^3
 yabai -m rule --add app=Signal space=^3
+
+yabai -m rule --add app=Mail space=^4
