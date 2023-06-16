@@ -45,11 +45,10 @@ local plugins = {
       -- Snippets
       { 'L3MON4D3/LuaSnip' },             -- Required
       { 'rafamadriz/friendly-snippets' }, -- Optional
-
-      -- Status info
-      "j-hui/fidget.nvim",
     },
   },
+  -- LSP status info
+  { "j-hui/fidget.nvim", tag = "legacy" },
   "folke/neoconf.nvim", -- Per-project configuration
 
   -- Basic UI
