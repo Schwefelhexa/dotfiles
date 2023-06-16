@@ -52,7 +52,6 @@ local plugins = {
   "folke/neoconf.nvim", -- Per-project configuration
 
   -- Basic UI
-  "voldikss/vim-floaterm",
   "nvim-lualine/lualine.nvim",
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -68,21 +67,12 @@ local plugins = {
 
   -- Utilities
   "tversteeg/registers.nvim",
-  "m4xshen/autoclose.nvim",
   "folke/which-key.nvim",
   "numToStr/Comment.nvim", -- "gc" to comment visual regions/lines
-  "theprimeagen/refactoring.nvim",
   "kylechui/nvim-surround",
-  {
-    'stevearc/oil.nvim',
-    opts = {},
-    -- Optional dependencies
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-  },
   'jghauser/mkdir.nvim', -- Create missing directories when writing a file
 
   -- Colorschemes
-  "zbirenbaum/neodim",
   "catppuccin/nvim",
 
   -- Silly stuff
@@ -93,9 +83,6 @@ local plugins = {
 
   -- Copilot
   "github/Copilot.vim",
-
-  -- Notes
-  "renerocksai/telekasten.nvim",
 
   -- Misc
   { "echasnovski/mini.nvim", version = "*" },

@@ -14,9 +14,6 @@ vim.keymap.set('n', '<leader>wj', '<C-w>j', { desc = "[W]indow: j" })
 vim.keymap.set('n', '<leader>wk', '<C-w>k', { desc = "[W]indow: k" })
 vim.keymap.set('n', '<leader>wl', '<C-w>l', { desc = "[W]indow: l" })
 
-vim.keymap.set('n', '<leader>wg', ':FloatermNew lazygit<CR>', { desc = "[W]indow [G]it" })
-vim.keymap.set('n', '<leader>wt', ':FloatermToggle<CR>', { desc = "[W]indow [T]erminal" })
-
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
