@@ -73,6 +73,7 @@ local plugins = {
   'jghauser/mkdir.nvim', -- Create missing directories when writing a file
 
   -- Colorschemes
+  "zbirenbaum/neodim",
   "catppuccin/nvim",
 
   -- Silly stuff
