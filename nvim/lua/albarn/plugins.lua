@@ -63,7 +63,6 @@ local plugins = {
   { "nvim-treesitter/nvim-treesitter",          run = ":TSUpdate" },
   "nvim-treesitter/nvim-treesitter-context",
   "folke/todo-comments.nvim",
-  "lukoshkin/trailing-whitespace",       -- Highlight trailing whitespace
   "lewis6991/gitsigns.nvim",
   "lukas-reineke/indent-blankline.nvim", -- Add indentation guides even on blank lines
 

@@ -1,2 +1,0 @@
-require("trailing-whitespace").setup()
-
