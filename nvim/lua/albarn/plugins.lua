@@ -71,6 +71,7 @@ local plugins = {
   "numToStr/Comment.nvim", -- "gc" to comment visual regions/lines
   "kylechui/nvim-surround",
   'jghauser/mkdir.nvim', -- Create missing directories when writing a file
+  "akinsho/toggleterm.nvim",
 
   -- Colorschemes
   "zbirenbaum/neodim",
