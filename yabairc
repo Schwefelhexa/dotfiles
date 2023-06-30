@@ -74,3 +74,7 @@ yabai -m rule --add app=Telegram space=^3
 yabai -m rule --add app=Signal space=^3
 
 yabai -m rule --add app=Mail space=^4
+
+# =============== floating ============
+yabai -m rule --add app=Flow manage=off
+yabai -m rule --add app="Cisco AnyConnect" manage=off
