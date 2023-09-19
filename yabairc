@@ -5,7 +5,7 @@ sudo yabai --load-sa
 
 yabai -m config                                 \
     mouse_follows_focus          off            \
-    focus_follows_mouse          off            \
+    focus_follows_mouse          autofocus      \
     window_origin_display        default        \
     window_placement             second_child   \
     window_zoom_persist          on             \
@@ -65,6 +65,7 @@ yabai -m rule --add app=WezTerm space=^1
 yabai -m rule --add app=Alacritty space=^1
 yabai -m rule --add app=Kitty space=^1
 yabai -m rule --add app=Terminal space=^1
+yabai -m rule --add app=Godot space=^1
 
 yabai -m rule --add app=Arc space=^2
 yabai -m rule --add app=Firefox space=^2
@@ -74,6 +75,7 @@ yabai -m rule --add app=Telegram space=^3
 yabai -m rule --add app=Signal space=^3
 
 yabai -m rule --add app=Mail space=^4
+yabai -m rule --add app=Spotify space=^4
 
 # =============== floating ============
 yabai -m rule --add app=Flow manage=off
