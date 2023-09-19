@@ -53,6 +53,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+alias pip='pip3'
+alias python='python3'
 
 # Pastebin alternative from the CLI 🤯
 function paste() {
