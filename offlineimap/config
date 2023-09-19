@@ -14,7 +14,7 @@ type = IMAP
 remotehosteval = get_hostname("RWTH Mail")
 remoteusereval = get_username("RWTH Mail")
 remotepasseval = get_password("RWTH Mail")
-sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+sslcacertfile = /Users/albarn/.config/offlineimap/cacert.crt
 
 [Repository RWTH-Local]
 type = Maildir
@@ -32,7 +32,7 @@ type = IMAP
 remotehosteval = get_hostname("Embedded Mail")
 remoteusereval = get_username("Embedded Mail")
 remotepasseval = get_password("Embedded Mail")
-sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+sslcacertfile = /Users/albarn/.config/offlineimap/cacert.crt
 
 [Repository Embedded-Local]
 type = Maildir
@@ -50,7 +50,7 @@ type = IMAP
 remotehosteval = get_hostname("Personal Mail")
 remoteusereval = get_username("Personal Mail")
 remotepasseval = get_password("Personal Mail")
-sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+sslcacertfile = /Users/albarn/.config/offlineimap/cacert.crt
 
 [Repository Personal-Local]
 type = Maildir
@@ -68,7 +68,7 @@ type = IMAP
 remotehosteval = get_hostname("Halifax Mail")
 remoteusereval = get_username("Halifax Mail")
 remotepasseval = get_password("Halifax Mail")
-sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+sslcacertfile = /Users/albarn/.config/offlineimap/cacert.crt
 
 [Repository Halifax-Local]
 type = Maildir
