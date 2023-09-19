@@ -32,7 +32,6 @@ function cat() {
 }
 
 eval $(thefuck --alias)
-eval "$(pyenv init -)"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias shuf="gshuf"
