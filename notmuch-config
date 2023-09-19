@@ -11,7 +11,7 @@
 # configured here named ".notmuch".
 #
 [database]
-path=/var/spool/mail/albarn
+path=/Users/albarn/Mail
 
 # User configuration
 #
@@ -31,7 +31,7 @@ path=/var/spool/mail/albarn
 [user]
 name=Alexander Baron
 primary_email=alexander.baron1@rwth-aachen.de
-other_email=albarn@halifax.rwth-aachen.de;alexander@baron-online.eu;baron@embbed.rwth-aachen.de;
+other_email=albarn@halifax.rwth-aachen.de;alexander@baron-online.eu;baron@embbeded.rwth-aachen.de;
 
 # Configuration for "notmuch new"
 #
@@ -60,6 +60,7 @@ tags=new;inbox;
 #		query will override that exclusion.
 #
 [search]
+exclude_tags=deleted;
 
 # Maildir compatibility configuration
 #
