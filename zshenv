@@ -10,7 +10,7 @@ export COMPOSE_DOCKER_CLI_BUILD=0
 export DOCKER_BUILDKIT=0
 export GOPATH="$HOME/.go"
 export RUSTC_WRAPPER=sccache
-export PYENV_ROOT="$HOME/.pyenv"
+# export PYENV_ROOT="$HOME/.pyenv"
 
 export EDITOR="nvim"
 
@@ -20,7 +20,9 @@ export PATH="$PATH:$HOME/.files/scripts"
 export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$PATH:$PYENV_ROOT/bin"
+export PATH="$(python3 -m site --user-base)/bin:$PATH"
+
+# export PATH="$PATH:$PYENV_ROOT/bin"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac specific
@@ -38,7 +40,8 @@ fi
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
 --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
---color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
+--color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796 \
+--color=gutter:#24273a"
 
 export BAT_THEME="Catppuccin-macchiato"
 
