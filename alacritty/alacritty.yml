@@ -17,11 +17,11 @@ visual_bell:
 
 live_config_reload: true
 
-shell:
-  program: /bin/zsh
-  args:
-  - -c
-  - $HOME/.files/scripts/terminal-startup
+# shell:
+#   program: /bin/zsh
+#   args:
+#   - -c
+#   - $HOME/.files/scripts/terminal-startup
 
 window:
   dimensions:
