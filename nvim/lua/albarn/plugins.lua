@@ -72,6 +72,11 @@ local plugins = {
   "kylechui/nvim-surround",
   'jghauser/mkdir.nvim', -- Create missing directories when writing a file
   "akinsho/toggleterm.nvim",
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {}
+  },
 
   -- Colorschemes
   "zbirenbaum/neodim",
