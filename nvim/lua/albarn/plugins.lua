@@ -20,7 +20,7 @@ local plugins = {
     branch = "0.1.x",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
-  { "nvim-telescope/telescope-fzf-native.nvim", run = "make",     cond = vim.fn.executable "make" == 1 },
+  { "nvim-telescope/telescope-fzf-native.nvim", run = "make",  cond = vim.fn.executable "make" == 1 },
   "ggandor/leap.nvim",
   "theprimeagen/harpoon",
 
@@ -48,7 +48,7 @@ local plugins = {
     },
   },
   -- LSP status info
-  { "j-hui/fidget.nvim", tag = "legacy" },
+  { "j-hui/fidget.nvim",                        tag = "legacy" },
   "folke/neoconf.nvim", -- Per-project configuration
 
   -- Basic UI
@@ -59,7 +59,7 @@ local plugins = {
   },
 
   -- Improved UI
-  { "nvim-treesitter/nvim-treesitter",          run = ":TSUpdate" },
+  { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
   "nvim-treesitter/nvim-treesitter-context",
   "folke/todo-comments.nvim",
   "lewis6991/gitsigns.nvim",
@@ -70,7 +70,7 @@ local plugins = {
   "folke/which-key.nvim",
   "numToStr/Comment.nvim", -- "gc" to comment visual regions/lines
   "kylechui/nvim-surround",
-  'jghauser/mkdir.nvim', -- Create missing directories when writing a file
+  'jghauser/mkdir.nvim',   -- Create missing directories when writing a file
   "akinsho/toggleterm.nvim",
   {
     'windwp/nvim-autopairs',
@@ -92,7 +92,7 @@ local plugins = {
   "github/Copilot.vim",
 
   -- Misc
-  { "echasnovski/mini.nvim", version = "*" },
+  { "echasnovski/mini.nvim",           version = "*" },
 }
 
 require("lazy").setup(plugins, {})
