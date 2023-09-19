@@ -1,0 +1,35 @@
+{
+  "title": "Personal Rules (@albarn)",
+  "rules": [
+    {
+      "description": "Holding Space maps to Meh",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_control",
+                "option"
+              ]
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "spacebar"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

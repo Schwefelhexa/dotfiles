@@ -1,0 +1,205 @@
+{
+  "title": "Home Row Modifiers",
+  "rules": [
+    {
+      "description": "Remap a to left_shift when held",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a"
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250,
+            "basic.to_if_held_down_threshold_milliseconds": 250
+          },
+          "to_if_alone": [
+            {
+              "key_code": "a"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_shift"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Remap s to left_control when held",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "s"
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250,
+            "basic.to_if_held_down_threshold_milliseconds": 250
+          },
+          "to_if_alone": [
+            {
+              "key_code": "s"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Remap d to left_option when held",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d"
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250,
+            "basic.to_if_held_down_threshold_milliseconds": 250
+          },
+          "to_if_alone": [
+            {
+              "key_code": "d"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_option"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Remap f to left_command when held",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f"
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250,
+            "basic.to_if_held_down_threshold_milliseconds": 250
+          },
+          "to_if_alone": [
+            {
+              "key_code": "f"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_command"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Remap j to left_command when held",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j"
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250,
+            "basic.to_if_held_down_threshold_milliseconds": 250
+          },
+          "to_if_alone": [
+            {
+              "key_code": "j"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_command"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Remap k to left_option when held",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k"
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250,
+            "basic.to_if_held_down_threshold_milliseconds": 250
+          },
+          "to_if_alone": [
+            {
+              "key_code": "k"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_option"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Remap l to left_control when held",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l"
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250,
+            "basic.to_if_held_down_threshold_milliseconds": 250
+          },
+          "to_if_alone": [
+            {
+              "key_code": "l"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Remap semicolon to left_shift when held",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon"
+          },
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 250,
+            "basic.to_if_held_down_threshold_milliseconds": 250
+          },
+          "to_if_alone": [
+            {
+              "key_code": "semicolon"
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "left_shift"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
