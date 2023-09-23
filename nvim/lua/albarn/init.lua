@@ -1,5 +1,5 @@
-require("albarn.set")
-require("albarn.remap")
+require('albarn.set')
+require('albarn.keymap')
 
-require("albarn.plugins")
+require('albarn.lazy')
 

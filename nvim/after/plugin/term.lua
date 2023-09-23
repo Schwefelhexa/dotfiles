@@ -21,3 +21,4 @@ vim.keymap.set("n", "<leader>wg", function()
   }
   lazygit:toggle()
 end, { desc = "[W]indow [G]it" })
+
