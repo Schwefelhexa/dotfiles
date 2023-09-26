@@ -12,20 +12,21 @@ function vim() {
 
 # Thanks, https://salferrarello.com/zsh-alias-with-fallback !
 function ls() {
-  exa --icons "$@" || /usr/bin/ls "$@"
+  exa --icons "$@" || /bin/ls "$@"
 }
 function l() {
-  exa --icons --header -l --git "$@" || /usr/bin/ls -lh "$@"
+  exa --icons --header -l --git "$@" || /bin/ls -lh "$@"
 }
 function la() {
-  exa --icons --header -la --git "$@" || /usr/bin/ls -lah "$@"
+  exa --icons --header -la --git "$@" || /bin/ls -lah "$@"
 }
 function lf() {
-  exa --icons --group-directories-first -l -h -H -m -u -U --git "$@" || /usr/bin/ls -lah "$@"
+  exa --icons --group-directories-first -l -h -H -m -u -U --git "$@" || /bin/ls -lah "$@"
 }
-function lt() {
-  exa --icons -T --git "$@" || /usr/bin/ls -lah "$@"
-}
+alias lt="exa --icons -T --git -L=2"
+alias ltt="exa --icons -T --git -L=3"
+alias lttt="exa --icons -T --git -L=4"
+alias "lt*"="exa --icons -T --git"
 
 function cat() {
   bat "$@" || /usr/bin/cat "$@"
