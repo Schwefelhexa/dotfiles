@@ -65,4 +65,5 @@ meh - z: open -a zoom.us
 meh - g: open -a GoodNotes
 meh - b: open -a DBeaver
 meh - i: open -a Alacritty
+meh - x: open -a XCode
 
