@@ -78,3 +78,5 @@ yabai -m rule --add app=Spotify space=^4
 # =============== floating ============
 yabai -m rule --add app=Flow manage=off
 yabai -m rule --add app="Cisco AnyConnect" manage=off
+yabai -m rule --add subrole="kAXSystemDialogSubrole" manage=off
+yabai -m rule --add subrole="kAXSystemFloatingWindowSubrole" manage=off
