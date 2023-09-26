@@ -13,7 +13,7 @@ end
 -- This is where you actually apply your config choices
 
 config.color_scheme = 'Catppuccin Macchiato'
-config.font = wezterm.font 'FiraCode Nerd Font'
+config.font = wezterm.font 'Fira Code'
 config.font_size = 11
 
 config.enable_tab_bar = false
