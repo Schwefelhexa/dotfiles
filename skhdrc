@@ -28,9 +28,6 @@ meh - 7: yabai -m space --focus 7
 meh - 8: yabai -m space --focus 8
 meh - 9: yabai -m space --focus 9
 
-meh - n: yabai -m space --create
-meh - x: yabai -m space --destroy
-
 # move windows in spaces
 hyper - 0x21 : yabai -m window --space prev && yabai -m space --focus prev # [
 hyper - 0x1E: yabai -m window --space next && yabai -m space --focus next # ]
