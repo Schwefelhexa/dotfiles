@@ -89,5 +89,8 @@ require("lazy").setup({
 
 	"ThePrimeagen/refactoring.nvim",
 
-	{ "folke/which-key.nvim", opts = {}, lazy = false },
+	{ "folke/which-key.nvim",            opts = {},                lazy = false },
+
+	-- Stupid stuff
+	{ "eandrju/cellular-automaton.nvim", cmd = "CellularAutomaton" },
 }, lazy_config)
