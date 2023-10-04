@@ -82,8 +82,12 @@ require("lazy").setup({
 	"tpope/vim-sleuth",
 
 	-- Per-project configuration, supports vscode settings.json
-	{ "folke/neoconf.nvim", opts = {}, lazy = false },
+	{ "folke/neoconf.nvim",  opts = {},            lazy = false },
 
 	-- Create missing directories before writing file
 	{ "jghauser/mkdir.nvim", event = "BufWritePre" },
+
+	"ThePrimeagen/refactoring.nvim",
+
+	{ "folke/which-key.nvim", opts = {}, lazy = false },
 }, lazy_config)
