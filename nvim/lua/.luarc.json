@@ -1,0 +1,26 @@
+{
+    "workspace.library": [
+        "/Users/albarn/.local/share/nvim/lazy/neodev.nvim/types/stable",
+        "/opt/homebrew/Cellar/neovim/0.9.2/share/nvim/runtime/lua",
+        "/Users/albarn/.local/share/nvim/lazy/nvim-lspconfig/lua",
+        "/Users/albarn/.local/share/nvim/lazy/cmp_luasnip/lua",
+        "/Users/albarn/.local/share/nvim/lazy/mason-lspconfig.nvim/lua",
+        "/Users/albarn/.local/share/nvim/lazy/nvim/lua",
+        "/Users/albarn/.local/share/nvim/lazy/plenary.nvim/lua",
+        "/Users/albarn/.local/share/nvim/lazy/fidget.nvim/lua",
+        "/Users/albarn/.local/share/nvim/lazy/leap.nvim/lua",
+        "/Users/albarn/.local/share/nvim/lazy/nvim-web-devicons/lua",
+        "/Users/albarn/.local/share/nvim/lazy/neodev.nvim/lua",
+        "/Users/albarn/.local/share/nvim/lazy/telescope-fzy-native.nvim/lua",
+        "/Users/albarn/.local/share/nvim/lazy/nvim-cmp/lua",
+        "/Users/albarn/.local/share/nvim/lazy/telescope.nvim/lua",
+        "/Users/albarn/.local/share/nvim/lazy/nvim-treesitter/lua",
+        "/Users/albarn/.local/share/nvim/lazy/lazy.nvim/lua",
+        "/Users/albarn/.local/share/nvim/lazy/cmp-nvim-lsp/lua",
+        "/Users/albarn/.local/share/nvim/lazy/LuaSnip/lua",
+        "/Users/albarn/.local/share/nvim/lazy/harpoon/lua",
+        "/Users/albarn/.local/share/nvim/lazy/mason.nvim/lua",
+        "/Users/albarn/.config/nvim/lua",
+        "${3rd}/luv/library"
+    ]
+}
