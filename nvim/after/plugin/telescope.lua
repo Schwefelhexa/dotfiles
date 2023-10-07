@@ -1,21 +1,21 @@
 require("telescope").setup {
-    extensions = {
-        fzy_native = {
-            override_generic_sorter = false,
-            override_file_sorter = true,
-        }
-    }
+	extensions = {
+		fzy_native = {
+			override_generic_sorter = false,
+			override_file_sorter = true,
+		}
+	}
 }
 require("telescope").load_extension("fzy_native")
 
 local telescope = require("telescope.builtin")
 
 vim.keymap.set("n", "<leader>/", function()
-  -- You can pass additional configuration to telescope to change theme, layout, etc.
-  telescope.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown {
-    winblend = 10,
-    previewer = false,
-  })
+	-- You can pass additional configuration to telescope to change theme, layout, etc.
+	telescope.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown {
+		winblend = 10,
+		previewer = false,
+	})
 end, { desc = "[/] Fuzzily search in current buffer" })
 
 vim.keymap.set("n", "<leader>gf", telescope.git_files, { desc = "Search [G]it [F]iles" })
@@ -28,4 +28,3 @@ vim.keymap.set("n", "<leader>sd", telescope.diagnostics, { desc = "[S]earch [D]i
 vim.keymap.set("n", "<leader>ss", telescope.lsp_definitions, { desc = "[S]earch [S]ymbols" })
 vim.keymap.set("n", "<leader>st", ":TodoTelescope<CR>", { desc = "[S]earch [T]odo-comments " })
 vim.keymap.set("n", "<leader><leader>", telescope.treesitter, { desc = "Search Treesitter" })
-

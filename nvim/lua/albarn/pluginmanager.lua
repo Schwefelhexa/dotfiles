@@ -34,22 +34,22 @@ require("lazy").setup({
 	"ggandor/leap.nvim",
 	"theprimeagen/harpoon",
 
-	{ "windwp/nvim-autopairs",    event = "InsertEnter", opts = {} },
-	{ "folke/todo-comments.nvim", opts = {},             lazy = false },
-	{ "numToStr/Comment.nvim",    opts = {},             lazy = false },
+	{ "windwp/nvim-autopairs",             event = "InsertEnter", opts = {} },
+	{ "folke/todo-comments.nvim",          opts = {},             lazy = false },
+	{ "numToStr/Comment.nvim",             opts = {},             lazy = false },
 
 	-- LSP Stuff
-	"williamboman/mason.nvim",
-	"neovim/nvim-lspconfig",
-	"williamboman/mason-lspconfig.nvim",
+	{ "williamboman/mason.nvim",           config = true,         lazy = false },
+	{ "neovim/nvim-lspconfig",             lazy = false },
+	{ "williamboman/mason-lspconfig.nvim", lazy = false },
 	{ "j-hui/fidget.nvim", tag = "legacy", opts = {}, lazy = false },
 	"folke/neodev.nvim",
 
 	-- Autocompletion
-	"hrsh7th/nvim-cmp",
-	"L3MON4D3/LuaSnip",
-	"saadparwaiz1/cmp_luasnip",
-	"hrsh7th/cmp-nvim-lsp",
+	{ "hrsh7th/nvim-cmp",         lazy = false, },
+	{ "L3MON4D3/LuaSnip",         lazy = false, },
+	{ "saadparwaiz1/cmp_luasnip", lazy = false, },
+	{ "hrsh7th/cmp-nvim-lsp",     lazy = false, },
 
 	{
 		"lewis6991/gitsigns.nvim",
@@ -72,9 +72,9 @@ require("lazy").setup({
 	},
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = { indent = { char = "┊" } }, lazy = false },
 	"nvim-lualine/lualine.nvim",
-	{ "nvim-neo-tree/neo-tree.nvim", branch = "v3.x",                                                       cmd = "Neotree" },
-	{ "stevearc/dressing.nvim",      opts = {},                                                             lazy = false },
-	{ "folke/trouble.nvim",          cmd = { "Trouble", "TroubleClose", "TroubleToggle", "TroubleRefresh" } },
+	{ "nvim-neo-tree/neo-tree.nvim", branch = "v3.x", cmd = "Neotree" },
+	{ "stevearc/dressing.nvim", opts = {}, lazy = false },
+	{ "folke/trouble.nvim", cmd = { "Trouble", "TroubleClose", "TroubleToggle", "TroubleRefresh" } },
 	"zbirenbaum/copilot.lua",
 	"akinsho/toggleterm.nvim",
 
@@ -82,7 +82,7 @@ require("lazy").setup({
 	"tpope/vim-sleuth",
 
 	-- Per-project configuration, supports vscode settings.json
-	{ "folke/neoconf.nvim",  opts = {},            lazy = false },
+	{ "folke/neoconf.nvim" },
 
 	-- Create missing directories before writing file
 	{ "jghauser/mkdir.nvim", event = "BufWritePre" },
