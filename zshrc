@@ -63,6 +63,10 @@ function paste() {
     curl --data-binary @${file} https://paste.rs
 }
 
+# Auto-complete SSH hostnames
+autoload -Uz compinit
+compinit
+
 alias pfetch='PF_INFO="ascii title os host uptime pkgs memory editor wm de palette" pfetch'
 pfetch
 
