@@ -70,3 +70,5 @@ compinit
 alias pfetch='PF_INFO="ascii title os host uptime pkgs memory editor wm de palette" pfetch'
 pfetch
 
+# opam configuration
+[[ ! -r /Users/albarn/.opam/opam-init/init.zsh ]] || source /Users/albarn/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
