@@ -20,7 +20,7 @@ config.enable_tab_bar = false
 config.window_decorations = 'RESIZE'
 
 config.default_prog = {'/bin/zsh', '-c', '$HOME/.files/scripts/terminal-startup'}
-config.term = 'screen-256color-bce'
+config.term = 'xterm-256color'
 
 -- and finally, return the configuration to wezterm
 return config
