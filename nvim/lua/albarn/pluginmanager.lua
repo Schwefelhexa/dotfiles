@@ -25,9 +25,15 @@ require("lazy").setup({
 
 	-- Telescope + Dependencies
 	{ "nvim-telescope/telescope-fzy-native.nvim", lazy = false },
-	{ "nvim-lua/telescope.nvim",                  branch = "0.1.x",   command = "Telescope" },
-	{ "nvim-treesitter/nvim-treesitter",          build = ":TSUpdate" },
-	{ "nvim-treesitter/nvim-treesitter-context",  lazy = false },
+	{ "nvim-lua/telescope.nvim",                  branch = "0.1.x", command = "Telescope" },
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		dependencies = {
+			{ "nvim-treesitter/nvim-treesitter-textobjects", lazy = false },
+			{ "nvim-treesitter/nvim-treesitter-context",     lazy = false },
+		}
+	},
 
 	"catppuccin/nvim",
 
@@ -42,7 +48,7 @@ require("lazy").setup({
 	{ "williamboman/mason.nvim",           config = true,         lazy = false },
 	{ "neovim/nvim-lspconfig",             lazy = false },
 	{ "williamboman/mason-lspconfig.nvim", lazy = false },
-	{ "j-hui/fidget.nvim", tag = "legacy", opts = {}, lazy = false },
+	{ "j-hui/fidget.nvim",                 tag = "legacy",        opts = {},   lazy = false },
 	"folke/neodev.nvim",
 
 	-- Autocompletion
