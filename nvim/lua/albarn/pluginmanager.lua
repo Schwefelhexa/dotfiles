@@ -32,6 +32,7 @@ require("lazy").setup({
 		dependencies = {
 			{ "nvim-treesitter/nvim-treesitter-textobjects", lazy = false },
 			{ "nvim-treesitter/nvim-treesitter-context",     lazy = false },
+			{ "windwp/nvim-ts-autotag",                      lazy = false },
 		}
 	},
 
