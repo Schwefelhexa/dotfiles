@@ -8,3 +8,13 @@ vim.api.nvim_create_autocmd({ "UIEnter" }, {
 		vim.api.nvim_set_current_win(current_window)
 	end,
 })
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = "*",
+	callback = function()
+		local filetype = vim.bo.filetype
+		if filetype == "Trouble" then
+			vim.wo.colorcolumn = ""
+		end
+	end
+})
