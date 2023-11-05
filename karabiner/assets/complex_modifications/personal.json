@@ -1,19 +1,14 @@
 {
-  "title": "Personal Rules (@albarn)",
+  "title": "Personal Rules",
   "rules": [
     {
       "description": "Holding Space maps to Meh",
       "manipulators": [
         {
           "from": {
-            "key_code": "spacebar",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
+            "key_code": "spacebar"
           },
-          "to_if_alone": [
+          "to": [
             {
               "key_code": "left_shift",
               "modifiers": [
@@ -30,6 +25,72 @@
           "type": "basic"
         }
       ]
-    }
+    },
+		{
+			"description": "Tapped Right Command maps to Sticky Meh",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "right_command"
+					},
+					"to": [
+						{
+							"key_code": "right_command"
+						}
+					],
+					"to_if_alone": [
+						{
+							"sticky_modifier": {
+								"left_shift": "toggle"
+							}
+						},
+						{
+							"sticky_modifier": {
+								"left_control": "toggle"
+							}
+						},
+						{
+							"sticky_modifier": {
+								"left_option": "toggle"
+							}
+						}
+					],
+					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "Tapped Left Command maps to Sticky Meh",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "left_command"
+					},
+					"to": [
+						{
+							"key_code": "left_command"
+						}
+					],
+					"to_if_alone": [
+						{
+							"sticky_modifier": {
+								"left_shift": "toggle"
+							}
+						},
+						{
+							"sticky_modifier": {
+								"left_control": "toggle"
+							}
+						},
+						{
+							"sticky_modifier": {
+								"left_option": "toggle"
+							}
+						}
+					],
+					"type": "basic"
+				}
+			]
+		}
   ]
 }
