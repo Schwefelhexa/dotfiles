@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+
+import sys
+
+args_start = 3
+
+
+def get_arg(name):
+    if len(sys.argv) > args_start:
+        other_args = sys.argv[args_start:]
+    else:
+        other_args = []
+
+    if name not in other_args:
+        return None
+
+    arg_idx = other_args.index(name)
+    if arg_idx + 1 >= len(other_args):
+        return True
+
+    value = other_args[arg_idx + 1]
+    if value.startswith("-"):
+        return True
+
+    if value.startswith('"') or value.startswith("'"):
+        value = value[1:][:-1]
+
+    if value.lower() == "true" or value.lower() == "yes":
+        return True
+
+    if value.lower() == "false" or value.lower() == "no":
+        return False
+
+    return value
+
+
+def get_bool_arg(name, default=False):
+    value = get_arg(name)
+    if value is None:
+        return default
+    if not isinstance(value, bool):
+        return default
+    return value
+
+
+def get_str_arg(name):
+    value = get_arg(name)
+    if not isinstance(value, str):
+        return None
+    return value
+
+
+if __name__ == "__main__":
+    input_file = sys.argv[1]
+    output_file = sys.argv[2] if len(
+        sys.argv) > 2 else input_file[:-4] + ".csv"
+    if output_file.startswith("-"):
+        output_file = input_file[:-4] + ".csv"
+        args_start = 2
+
+    if not get_bool_arg("--ignore-fileype") and input_file[-4:] != ".npy":
+        print("Input file must be a .npy file! (use --ignore-filetype to ignore)")
+        sys.exit(1)
+    if not get_bool_arg("--ignore-fileype") and output_file[-4:] != ".csv":
+        print("Output file must be a .csv file! (use --ignore-filetype to ignore)")
+        sys.exit(1)
+
+    headers_file = get_str_arg("--headers-file")
+
+    message = f"Converting {input_file} to {output_file}..."
+    if headers_file is not None:
+        message += f"\n  using headers from {headers_file}"
+    print(message)
+
+    import numpy as np
+    import pandas
+
+    headers = None
+    if headers_file is not None:
+        with open(headers_file, "r") as f:
+            headers = f.read().split(" ")
+
+    data = np.load(input_file)
+    df = pandas.DataFrame(data=data, columns=headers)
+    df.to_csv(output_file, index=False, header=get_bool_arg("--headers", True))
+
+    print("Done!")
