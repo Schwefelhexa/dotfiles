@@ -22,4 +22,11 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Formatting
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>p", function ()
+	vim.cmd("w")
+	vim.cmd("silent ! prettier --write %")
+	vim.cmd("e!")
+end)
+
