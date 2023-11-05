@@ -1,5 +1,5 @@
 # General options
-setopt beep extendedglob nomatch notify
+setopt nobeep extendedglob nomatch notify
 unsetopt autocd
 bindkey -v
 
