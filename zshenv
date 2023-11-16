@@ -5,9 +5,7 @@ SAVEHIST=10000
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export DOCKER_BUILDKIT=0
 export COMPOSE_DOCKER_CLI_BUILD=0
-export DOCKER_BUILDKIT=0
 export GOPATH="$HOME/.go"
 export RUSTC_WRAPPER=sccache
 # export PYENV_ROOT="$HOME/.pyenv"
