@@ -85,6 +85,8 @@ require("lazy").setup({
 	"zbirenbaum/copilot.lua",
 	"akinsho/toggleterm.nvim",
 
+	{ 'f-person/git-blame.nvim', cmd = 'GitBlameToggle' },
+
 	-- Detect tabstop and shiftwidth automatically
 	"tpope/vim-sleuth",
 
