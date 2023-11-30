@@ -61,3 +61,11 @@ pfetch
 
 # opam configuration
 [[ ! -r /Users/albarn/.opam/opam-init/init.zsh ]] || source /Users/albarn/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+# pnpm
+export PNPM_HOME="/Users/albarn/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
