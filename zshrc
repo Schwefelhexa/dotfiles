@@ -6,6 +6,12 @@ bindkey -v
 # Starship prompt
 eval "$(starship init zsh)"
 
+if command -v -- "xcp" > /dev/null 2>&1; then
+	function cp() {
+		xcp "$@"
+	}
+fi
+
 function vim() {
   nvim "$@" || /usr/bin/vim "$@"
 }
