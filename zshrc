@@ -61,6 +61,8 @@ pfetch
 
 # opam configuration
 [[ ! -r /Users/albarn/.opam/opam-init/init.zsh ]] || source /Users/albarn/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+export PATH="/opt/homebrew/opt/gradle@7/bin:$PATH"
+
 # pnpm
 export PNPM_HOME="/Users/albarn/Library/pnpm"
 case ":$PATH:" in
