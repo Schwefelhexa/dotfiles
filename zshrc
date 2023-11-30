@@ -12,31 +12,26 @@ if command -v -- "xcp" > /dev/null 2>&1; then
 	}
 fi
 
-function vim() {
-  nvim "$@" || /usr/bin/vim "$@"
-}
+if command -v -- "nvim" > /dev/null 2>&1; then
+	function vim() {
+		nvim "$@"
+	}
+fi
 
-# Thanks, https://salferrarello.com/zsh-alias-with-fallback !
-function ls() {
-  exa --icons "$@" || /bin/ls "$@"
-}
-function l() {
-  exa --icons --header -l --git "$@" || /bin/ls -lh "$@"
-}
-function la() {
-  exa --icons --header -la --git "$@" || /bin/ls -lah "$@"
-}
-function lf() {
-  exa --icons --group-directories-first -l -h -H -m -u -U --git "$@" || /bin/ls -lah "$@"
-}
-alias lt="exa --icons -T --git -L=2"
-alias ltt="exa --icons -T --git -L=3"
-alias lttt="exa --icons -T --git -L=4"
-alias "lt*"="exa --icons -T --git"
+if command -v -- "exa" > /dev/null 2>&1; then
+	alias ls="exa --icons"
+	alias l="exa --icons --header -l --git"
+	alias la="exa --icons --header -la --git"
+	alias lf="exa --icons --group-directories-first -l -h -H -m -u -U --git"
+	alias lt="exa --icons -T --git -L=2"
+	alias ltt="exa --icons -T --git -L=3"
+	alias lttt="exa --icons -T --git -L=4"
+	alias "lt*"="exa --icons -T --git"
+fi
 
-function cat() {
-  bat "$@" || /usr/bin/cat "$@"
-}
+if command -v -- "bat" > /dev/null 2>&1; then
+	alias cat="bat"
+fi
 
 eval $(thefuck --alias)
 
