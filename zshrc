@@ -18,15 +18,15 @@ if command -v -- "nvim" > /dev/null 2>&1; then
 	}
 fi
 
-if command -v -- "exa" > /dev/null 2>&1; then
-	alias ls="exa --icons"
-	alias l="exa --icons --header -l --git"
-	alias la="exa --icons --header -la --git"
-	alias lf="exa --icons --group-directories-first -l -h -H -m -u -U --git"
-	alias lt="exa --icons -T --git -L=2"
-	alias ltt="exa --icons -T --git -L=3"
-	alias lttt="exa --icons -T --git -L=4"
-	alias "lt*"="exa --icons -T --git"
+if command -v -- "eza" > /dev/null 2>&1; then
+	alias ls="eza --icons"
+	alias l="eza --icons --header -l --git"
+	alias la="eza --icons --header -la --git"
+	alias lf="eza --icons --group-directories-first -l -h -H -m -u -U --git"
+	alias lt="eza --icons -T --git -L=2"
+	alias ltt="eza --icons -T --git -L=3"
+	alias lttt="eza --icons -T --git -L=4"
+	alias "lt*"="eza --icons -T --git"
 fi
 
 if command -v -- "bat" > /dev/null 2>&1; then
