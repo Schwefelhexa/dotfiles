@@ -9,3 +9,9 @@ vim.api.nvim_set_hl(0, "HarpoonInactive", { bg = colors.crust, fg = colors.surfa
 vim.api.nvim_set_hl(0, "HarpoonNumberInactive", { bg = colors.crust, fg = colors.surface2 })
 vim.api.nvim_set_hl(0, "TabLineFill", { bg = colors.crust })
 
+-- Transparency
+local remove_bg = { "Normal", "NormalNC", "WarningMsg", "Title", "Question", "Constant" }
+for _, hl in ipairs(remove_bg) do
+	vim.api.nvim_set_hl(0, hl, { bg = nil })
+end
+
