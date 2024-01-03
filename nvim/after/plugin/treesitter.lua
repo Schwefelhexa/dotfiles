@@ -7,7 +7,7 @@ require("nvim-treesitter.configs").setup({
 			local max_filesize = 100 * 1024   -- 100 KB
 			local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
 			if ok and stats and stats.size > max_filesize then
-				print("File too large, disabling TreeSitter hightlights")
+				print("")
 				return true
 			end
 		end,
@@ -31,7 +31,7 @@ require("nvim-treesitter.configs").setup({
 				['ai'] = '@conditional.outer',
 				['il'] = '@loop.inner',
 				['al'] = '@loop.outer',
-				['at'] = '@comment.outer',
+				['ah'] = '@comment.outer',
 			},
 		},
 		move = {
@@ -42,28 +42,28 @@ require("nvim-treesitter.configs").setup({
 				[']]'] = '@class.outer',
 				[']i'] = '@conditional.outer',
 				[']l'] = '@loop.outer',
-				[']t'] = '@comment.outer'
+				[']h'] = '@comment.outer'
 			},
 			goto_next_end = {
 				[']M'] = '@function.outer',
 				[']['] = '@class.outer',
 				[']I'] = '@conditional.outer',
 				[']L'] = '@loop.outer',
-				[']T'] = '@comment.outer'
+				[']H'] = '@comment.outer'
 			},
 			goto_previous_start = {
 				['[m'] = '@function.outer',
 				['[['] = '@class.outer',
 				['[i'] = '@conditional.outer',
 				['[l'] = '@loop.outer',
-				['[t'] = '@comment.outer'
+				['[h'] = '@comment.outer'
 			},
 			goto_previous_end = {
 				['[M'] = '@function.outer',
 				['[]'] = '@class.outer',
 				['[I'] = '@conditional.outer',
 				['[L'] = '@loop.outer',
-				['[T'] = '@comment.outer'
+				['[H'] = '@comment.outer'
 			},
 		},
 		swap = {
