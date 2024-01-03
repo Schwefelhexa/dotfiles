@@ -28,3 +28,9 @@ vim.keymap.set("n", "<leader>sd", telescope.diagnostics, { desc = "[S]earch [D]i
 vim.keymap.set("n", "<leader>ss", telescope.lsp_definitions, { desc = "[S]earch [S]ymbols" })
 vim.keymap.set("n", "<leader>st", ":TodoTelescope<CR>", { desc = "[S]earch [T]odo-comments " })
 vim.keymap.set("n", "<leader><leader>", telescope.treesitter, { desc = "Search Treesitter" })
+
+vim.keymap.set("n", "gd", telescope.lsp_definitions, { desc = "[G]o to [D]efinition" })
+vim.keymap.set("n", "gr", telescope.lsp_references, { desc = "[G]o to [R]eferences" })
+vim.keymap.set("n", "gi", telescope.lsp_implementations, { desc = "[G]o to [I]mplementations" })
+vim.keymap.set("n", "gI", telescope.lsp_incoming_calls, { desc = "[G]o to [I]ncoming calls" })
+vim.keymap.set("n", "gO", telescope.lsp_outgoing_calls, { desc = "[G]o to [O]utgoing calls" })
