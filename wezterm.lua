@@ -46,6 +46,13 @@ config.keys = {
 		}
 	},
 	{
+		key = 'y',
+		mods = 'CTRL|SHIFT',
+		action = wezterm.action.SpawnCommandInNewTab {
+			args = { '/bin/zsh', '-c', 'tctrl open "~" -n ssh --client `tmux display-message -p "#{client_name}"`' }
+		}
+	},
+	{
 		key = 'f',
 		mods = 'CTRL|SHIFT',
 		action = wezterm.action.SpawnCommandInNewTab {
