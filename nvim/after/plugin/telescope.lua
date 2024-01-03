@@ -4,6 +4,9 @@ require("telescope").setup {
 			override_generic_sorter = false,
 			override_file_sorter = true,
 		}
+	},
+	defaults = {
+		layout_strategy = "flex",
 	}
 }
 require("telescope").load_extension("fzy_native")
