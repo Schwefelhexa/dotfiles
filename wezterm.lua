@@ -1,5 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
+local io = require 'io'
 
 -- This table will hold the configuration.
 local config = {}
@@ -61,6 +62,21 @@ config.keys = {
 		}
 	},
 }
+
+local function eval_cmd(command)
+	local handle = io.popen(command)
+	if handle == nil then
+		return nil
+	end
+
+	local result = handle:read("*a")
+	handle:close()
+	return result
+end
+
+wezterm.on('format-window-title', function()
+  return eval_cmd('tmux display-message -p \'#S\'')
+end)
 
 -- and finally, return the configuration to wezterm
 return config
