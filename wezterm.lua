@@ -71,6 +71,7 @@ local function eval_cmd(command)
 
 	local result = handle:read("*a")
 	handle:close()
+	result = string.sub(result, 1, -2)
 	return result
 end
 
