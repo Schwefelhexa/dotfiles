@@ -14,8 +14,8 @@ end
 -- This is where you actually apply your config choices
 
 config.color_scheme = 'Catppuccin Macchiato'
-config.font = wezterm.font 'Fira Code'
-config.font_size = 11
+config.font = wezterm.font 'CascadiaCode Nerd Font'
+config.font_size = 12
 
 config.enable_tab_bar = false
 config.window_decorations = 'RESIZE'
