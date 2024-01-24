@@ -101,4 +101,5 @@ require("lazy").setup({
 
 	-- Stupid stuff
 	{ "eandrju/cellular-automaton.nvim", cmd = "CellularAutomaton" },
+	{ "ThePrimeagen/vim-be-good", cmd = "VimBeGood" },
 }, lazy_config)
