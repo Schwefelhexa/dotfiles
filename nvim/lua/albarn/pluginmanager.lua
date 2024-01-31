@@ -81,6 +81,7 @@ require("lazy").setup({
 	"nvim-lualine/lualine.nvim",
 	{ "nvim-neo-tree/neo-tree.nvim", branch = "v3.x", cmd = "Neotree" },
 	{ "stevearc/dressing.nvim", opts = {}, lazy = false },
+	{ "folke/trouble.nvim", cmd = { "Trouble", "TroubleClose", "TroubleToggle", "TroubleRefresh" } },
 	"zbirenbaum/copilot.lua",
 	"akinsho/toggleterm.nvim",
 
