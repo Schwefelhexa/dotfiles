@@ -59,6 +59,13 @@ local servers = {
 			telemetry = { enable = false },
 		},
 	},
+	rust_analyzer = {
+		["rust-analyzer"] = {
+			checkOnSave = {
+				command = "clippy",
+			},
+		},
+	},
 }
 
 -- Setup neovim lua configuration
