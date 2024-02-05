@@ -41,8 +41,8 @@ require("lazy").setup({
 	"ggandor/leap.nvim",
 	"theprimeagen/harpoon",
 
+	"folke/todo-comments.nvim",
 	{ "windwp/nvim-autopairs",             event = "InsertEnter", opts = {} },
-	{ "folke/todo-comments.nvim",          opts = {},             lazy = false },
 	{ "numToStr/Comment.nvim",             opts = {},             lazy = false },
 
 	-- LSP Stuff
