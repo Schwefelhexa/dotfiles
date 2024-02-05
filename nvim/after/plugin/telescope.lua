@@ -27,7 +27,7 @@ vim.keymap.set("n", "<leader>sh", telescope.help_tags, { desc = "[S]earch [H]elp
 vim.keymap.set("n", "<leader>sw", telescope.grep_string, { desc = "[S]earch current [W]ord" })
 vim.keymap.set("n", "<leader>sg", telescope.live_grep, { desc = "[S]earch by [G]rep" })
 vim.keymap.set("n", "<leader>sd", telescope.diagnostics, { desc = "[S]earch [D]iagnostics" })
-vim.keymap.set("n", "<leader>ss", telescope.lsp_definitions, { desc = "[S]earch [S]ymbols" })
+vim.keymap.set("n", "<leader>ss", telescope.lsp_dynamic_workspace_symbols, { desc = "[S]earch [S]ymbols" })
 vim.keymap.set("n", "<leader>st", ":TodoTelescope<CR>", { desc = "[S]earch [T]odo-comments " })
 vim.keymap.set("n", "<leader><leader>", telescope.treesitter, { desc = "Search Treesitter" })
 
