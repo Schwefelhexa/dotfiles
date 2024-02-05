@@ -25,3 +25,8 @@ register("n", "<leader>hh", "harpoon.ui", "nav_file", 1)
 register("n", "<leader>hj", "harpoon.ui", "nav_file", 2)
 register("n", "<leader>hk", "harpoon.ui", "nav_file", 3)
 register("n", "<leader>hl", "harpoon.ui", "nav_file", 4)
+
+register("n", "<C-h>", "harpoon.ui", "nav_file", 1)
+register("n", "<C-j>", "harpoon.ui", "nav_file", 2)
+register("n", "<C-k>", "harpoon.ui", "nav_file", 3)
+register("n", "<C-l>", "harpoon.ui", "nav_file", 4)
