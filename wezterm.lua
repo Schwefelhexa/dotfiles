@@ -19,7 +19,6 @@ config.font_size = 12
 
 config.enable_tab_bar = false
 config.window_decorations = 'RESIZE'
-config.window_background_opacity = 0.92
 
 config.default_prog = { '/bin/zsh', '-c', '$HOME/.files/scripts/terminal-startup' }
 config.term = 'xterm-256color'
