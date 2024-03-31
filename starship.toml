@@ -19,6 +19,9 @@ staged = '[++\($count\)](green)'
 renamed = '👅'
 deleted = '🗑'
 
+[git_branch]
+truncation_length = 32
+
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"
 flamingo = "#f0c6c6"
