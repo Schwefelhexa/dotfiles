@@ -33,8 +33,6 @@ if command -v -- "bat" > /dev/null 2>&1; then
 	alias cat="bat"
 fi
 
-alias c="cd"
-
 eval $(thefuck --alias)
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -42,9 +40,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 bindkey '^R' history-incremental-search-backward
-
-alias pip='pip3'
-alias python='python3'
 
 # Pastebin alternative from the CLI 🤯
 function paste() {
@@ -56,12 +51,16 @@ function paste() {
 autoload -Uz compinit
 compinit
 
+if command -v -- "zoxide" > /dev/null 2>&1; then
+	eval "$(zoxide init zsh)"
+	alias c="z"
+	alias cd="z"
+else
+	alias c="cd"
+fi
+
 alias pfetch='PF_INFO="ascii title os host uptime pkgs memory editor wm de palette" pfetch'
 pfetch
-
-# opam configuration
-[[ ! -r /Users/albarn/.opam/opam-init/init.zsh ]] || source /Users/albarn/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-export PATH="/opt/homebrew/opt/gradle@7/bin:$PATH"
 
 # pnpm
 export PNPM_HOME="/Users/albarn/Library/pnpm"
@@ -74,3 +73,10 @@ esac
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# bun completions
+[ -s "/Users/albarn/.bun/_bun" ] && source "/Users/albarn/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

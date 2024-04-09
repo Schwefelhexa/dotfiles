@@ -1,3 +1,5 @@
+hyper - space: yabai --restart-service
+
 # focus windows
 meh - l: yabai -m window --focus east
 meh - h: yabai -m window --focus west
@@ -51,19 +53,31 @@ meh - u: yabai -m display --focus recent
 
 # Application shortcuts
 meh - a: open -a WezTerm
+hyper - a: open -a "IntelliJ IDEA Ultimate"
 meh - s: open -a Arc
+hyper - s: open -a Slack
 meh - d: open -a Obsidian
-meh - t: open -a TickTick
+meh - f: open -a Firefox
+meh - t: open -a Todoist
 meh - w: open -a /Applications/WhatsApp.app
+hyper - w: open -a "Microsoft Word"
 meh - q: open -a Signal
 meh - r: open -a Telegram
 meh - e: open -a Finder
 meh - m: open -a Mail
 meh - c: open -a Calendar
+hyper - c: open -a 'Cisco Secure Client'
 meh - p: open -a Spotify
+hyper - p: open -a 1Password
 meh - z: open -a zoom.us
-meh - g: open -a GoodNotes
-meh - b: open -a DBeaver
+meh - g: open -a Timemator
+hyper - g: open -a WireGuard
+hyper - b: open -a DBeaver
+meh - b: open -a DataGrip
 meh - i: open -a Alacritty
 meh - x: open -a XCode
+hyper - x: open -a "Microsoft Excel"
+meh - n: open -a Polypane
+meh - v: open -a 'Microsoft PowerPoint'
+hyper - v: open -a Keynote
 
